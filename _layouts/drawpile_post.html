@@ -1,0 +1,12 @@
+---
+layout: drawpile
+---
+<article>
+  <h1 class="title">{{ page.title }}</h1>
+  <h2 class="subtitle">{{ page.date | date: "%B %-d, %Y" }} by {{ page.tags | where_exp: "item", "item contains '@'" | first | remove: "@" }}</h2>
+  <div class="content">
+    {{ content }}
+  </div>
+</article>
+<hr>
+<p><a href="{{ "/devblog" | relative_url }}#post-{{ page.slug }}">« Development Blog</a></p>

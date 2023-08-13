@@ -1,0 +1,30 @@
+---
+title: Development Blog
+layout: drawpile
+---
+
+<main>
+  <h1 class="title">{{ page.title }}</h1>
+  <div class="content">
+    <p>What's going on with Drawpile's development. Showing off stuff that's in the works, but also ideas, thoughts and plans.</p>
+  </div>
+  <hr>
+  {%- assign posts = site.posts %}
+  {%- if posts.size > 0 -%}
+    {%- for post in posts -%}
+      <article>
+        <h2 id="post-{{post.slug}}" class="title is-4">{{ post.title | escape }}</h2>
+        <h3 class="subtitle is-6">{{ post.date | date: "%B %-d, %Y" }} by {{ post.tags | where_exp: "item", "item contains '@'" | first | remove: "@" }}</h3>
+        <div class="content">
+          {{ post.excerpt }}
+          <p><a href="{{ post.url }}">Read more…</a></p>
+        </div>
+      </article>
+      <hr>
+    {%- endfor -%}
+  {%- else -%}
+    <div class="content">
+      <p>Nothing here!</p>
+    </div>
+  {%- endif -%}
+</main>
