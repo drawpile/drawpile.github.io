@@ -1,8 +1,8 @@
 title: Drawpile
 description: Collaborative Drawing
-domain: drawpile.github.io
+domain: docs.drawpile.net
 baseurl: "/"
-url: "https://drawpile.github.io"
+url: "https://docs.drawpile.net"
 github_username: drawpile
 theme: minima
 plugins:
