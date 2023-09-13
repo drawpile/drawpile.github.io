@@ -4,11 +4,27 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("navbar-menu").classList.toggle("is-active");
   };
 
+  function decodeUsernameFromCookie(username) {
+    // If there's a comma or something in the username, it gets quotes and
+    // escaped with octal. So 'secret,' gets turned into '"secret\054"'.
+    const m = /^"(.+)"$/.exec(username);
+    if (m) {
+      username = m[1].replaceAll(/\\([0-9]{3})/g, function (_, ord) {
+        return String.fromCharCode(parseInt(ord, 8));
+      });
+    }
+    // If there's other characters in the username, they get surrounded by
+    // dashes with the ordinal in decimal between them.
+    return username.replaceAll(/-([0-9]+)-/g, function (_, ord) {
+      return String.fromCharCode(parseInt(ord, 10));
+    });
+  }
+
   function getUsernameFromCookies() {
     for (const cookie of document.cookie.split(";")) {
       const [key, value] = cookie.split("=");
       if (key.trim() === "username") {
-        return value.trim();
+        return decodeUsernameFromCookie(value.trim());
       }
     }
     return null;
