@@ -5,6 +5,9 @@ date: 2023-08-24 00:00:00 +0200
 category: "devblog"
 tag: "@askmeaboutloom"
 ---
+
+**Update:** The change proposed in this article has been accepted by Krita and should be in version 5.2.1. Drawpile will have it in version 2.2.0, starting from beta 9.
+
 This is a technical article not directly concerning Drawpile itself, but the interoperability with other drawing programs like Krita through the OpenRaster (ORA) format. Drawpile uses this as its "native" format, but originally it came out of efforts from Krita for an interoperable image format and it's supported by various applications.
 
 **tl;dr:** ORA files don't support alpha preserve on layers. This doesn't matter for Drawpile, because its alpha preserve behavior is baked into the blend mode, but in Krita, the alpha preserve state of a layer just doesn't get saved and so also doesn't get loaded, which is annoying. I wanna contribute a fix to Krita.
