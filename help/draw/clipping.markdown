@@ -6,6 +6,8 @@ category: "help"
 tag: help draw
 ---
 
+*This article is available in the following languages:* English, [*German*](clipping.de_DE).
+
 Drawpile supports alpha preserve on layers. This is also known by various other names, like "clipping groups" or "inherit alpha". What it means is that you have a layer that doesn't add new pixels to the canvas, it only modifies something below it. It's frequently used for shading and lighting.
 
 In Drawpile, all blend modes except Normal and Erase preserve alpha. That means you don't need to do anything special to enable it, just stick your layers into a group . So, for example, if you want to do shading, you'd arrange your layers like this:
