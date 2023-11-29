@@ -1,0 +1,159 @@
+---
+layout: drawpile_help
+title:  "Frequently Asked Questions"
+date: 2023-09-29 00:00:00 +0200
+category: "help"
+tag: help common
+---
+
+If you don't find an answer to your question here, either check out the other help articles on the site or ask in Discord, the web chat or on GitHub! You can find links to those [on the main help page](https://drawpile.net/help/).
+
+{% include help/faqtoc.html %}
+
+## Tablets
+
+### Why does Drawpile not recognize pen pressure?
+
+Your current brush may not have pressure dynamics enabled, try another one.
+
+On Windows, there may be a driver mismatch. In Drawpile, pick a different option under Edit → Tablet Driver. Try them all and see if one of them works.
+
+For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
+
+![Tablet Drivers menu]({{ "/assets/img/help/tabletdriver.webp" | relative_url }})
+
+### Why does Drawpile not switch back after I use my tablet pen's eraser?
+
+This usually happens on Windows because of a driver mismatch. In Drawpile, pick a different option under Edit → Tablet Driver. Usually "KisTablet Wintab" is the correct one in this case, but try them all until you find one that works.
+
+For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
+
+![Tablet Drivers menu]({{ "/assets/img/help/tabletdriver.webp" | relative_url }})
+
+### Why am I getting thick dots on my lines?
+
+Similar to the above, this is usually a driver mismatch in Windows. In Drawpile, pick a different option under Edit → Tablet Driver. Usually "KisTablet Windows Ink" is the correct one in this case, but try them all until you find one that works.
+
+For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
+
+![Tablet Drivers menu]({{ "/assets/img/help/tabletdriver.webp" | relative_url }})
+
+### Why did my tablet stop working when it was fine yesterday?
+
+This usually happens after a Windows or tablet driver update breaking stuff. In Drawpile, pick a different option under Edit → Tablet Driver. Try them all until you find one that works. It may be one that previously didn't work!
+
+If you're on Linux, updates to your window manager (Gnome, mostly) may break tablet integration. You can try downgrading or switching to a different window manager to check if things work again.
+
+For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
+
+![Tablet Drivers menu]({{ "/assets/img/help/tabletdriver.webp" | relative_url }})
+
+### Why does Drawpile not draw when I touch my screen?
+
+Probably because it's not set to do so. Go into Edit → Preferences, switch to the "Input" tab. Make sure the touch mode is set to "Touchscreen" and the one-finger input is set to "Draw".
+
+For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
+
+![Touch input preferences]({{ "/assets/img/help/inputtouch.webp" | relative_url }})
+
+
+## Online
+
+### Why are random people joining my session?
+
+Probably because you didn't set a password on it. You can set it on a running session under Session → Settings. You can also assign one when hosting a session.
+
+### Why is undo and redo so delayed?
+
+Undo operations are synchronized with the server. If you have high latency, this will cause a delay from the command having to travel from your computer to the server and back. This is usually because of physical location, if the data has to go halfway around the world, it'll take longer than for people who live next door to it.
+
+If everyone in the session is having the issue, consider switching to a different server.
+
+### Why can't I undo anymore after other people draw things?
+
+Undos are shared between all users. Operators can increase the undo limit under Session → Undo Limit.
+
+### What is this "session reset" that happens intermittently?
+
+The Drawpile server stores a history of all drawing commands made in the session. When that gets too big, the history is replaced with the current state of the canvas as a new starting point. That's the reset.
+
+Operators can also manually reset the session under Session → Reset. It will make catchup for newly joining users faster, since they don't have to play back as much of the drawing.
+
+
+## Drawing
+
+### Why does Drawpile not save the changes to my brush?
+
+Drawpile won't overwrite brush presets automatically. To do so, click on the hamburger menu on the brushes dock or right-click on a preset and use "Overwrite Brush Preset". If you want to create a new one instead, use "New Brush Preset".
+
+You can also use the five brush slots to switch between different brush configurations without saving them.
+
+![Brush preset saving]({{ "/assets/img/help/overwritebrushpreset.webp" | relative_url }})
+
+### Why does the fill tool just fill a square?
+
+The fill tool has a size limit to avoid spills across the entire canvas and "flashbanging" everyone else. You can increase the limit in the tool's settings or by using the same shortcuts as for changing the size of brushes.
+
+### Why do layers with blend modes like Multiply not work inside layer groups?
+
+Drawpile preserves alpha for blend modes other than Normal and Erase. You may be used to this as "clipping groups" from other programs. If you don't want this, set the group's blend mode to "Pass Through".
+
+For more information, check out [the full article on alpha preserve](/help/draw/clipping).
+
+### How can I alpha lock a layer?
+
+In Drawpile, you alpha lock your brush, not the layer. For classic brushes, you do this by changing the brush's mode from Normal to Recolor. For MyPaint brushes, activate the lock button.
+
+If you really need an alpha-locked layer, you can use another layer in Recolor mode. For more information on how to do that, check out [the full article on alpha locking](/help/draw/clipping#alpha-lock).
+
+![Recolor mode on brushes]({{ "/assets/img/help/recolor.webp" | relative_url }})
+
+
+## Tech
+
+### Why does Windows say it protected my computer from Drawpile?
+
+Make sure that you download Drawpile [from the drawpile.net download page](https://drawpile.net/download/) or [from the Drawpile project GitHub releases](https://github.com/drawpile/Drawpile/releases). Other places are not provided by Drawpile and are not safe.
+
+If the warning shows up anyway, then it's probably because a new Drawpile version has been released recently. The warnings are nonsense and stop after a few weeks usually. There's nothing wrong with Drawpile, Microsoft just wants us to pay them $400 per year for them to not do this.
+
+### Why does my antivirus software flag or quarantine Drawpile?
+
+Make sure that you download Drawpile [from the drawpile.net download page](https://drawpile.net/download/) or [from the Drawpile project GitHub releases](https://github.com/drawpile/Drawpile/releases). Other places are not provided by Drawpile and are not safe.
+
+If it happens anyway, then it's probably because a new Drawpile version has been released recently. Antivirus software will consider it an unknown piece of software and react viciously. They usually stop after a few days, once they have analyzed it.
+
+### Can I use Drawpile on my Android device?
+
+Yes, it's available [on the Download page](https://drawpile.net/download/#Android) and should work on both tablets and phones. It's not currently available on the Play Store.
+
+### Can I use Drawpile on my iPad?
+
+No, Apple doesn't allow Drawpile in its App Store. There may be hope with regards to Apple being forced to open up their platform or via sideloading, but currently we don't have any developer that has the necessary devices and subscriptions to even try it out.
+
+If you know someone that does send them our way! The [main help page](https://drawpile.net/help/) lists ways to get in contact.
+
+### Is there a browser version of Drawpile?
+
+Not currently, but it is being worked on.
+
+### What programming language is Drawpile written in?
+
+Drawpile consists of several pieces in different languages.
+
+The core paint engine is written mostly in C and a bit of Rust. The frontend for the client and the server are both written in C++ using Qt.
+
+The list server is written in Go. The website is in Python. Web frontends are in TypeScript.
+
+
+## Project
+
+### Can I donate money to Drawpile?
+
+Thanks for considering it! It's currently not possible to do so, since we don't have the necessary organizational structure.
+
+### Can I contribute to Drawpile?
+
+You can! Documentation (like this article), translations, bug reports, feature suggestions and code contributions are gladly taken. For ways to get in contact, check out [the main help page](https://drawpile.net/help/).
+
+Hanging out on Discord or IRC to help people who have questions also helps.
