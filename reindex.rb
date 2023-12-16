@@ -28,6 +28,7 @@ categories = [
   {:key => 'common', :title => 'Common Topics'},
   {:key => 'draw', :title => 'Drawing and Tools'},
   {:key => 'tech', :title => 'Technical Issues'},
+  {:key => 'development', :title => 'Development'},
 ]
 
 articles = {}
