@@ -25,7 +25,7 @@ Further troubleshooting is different depending on which operating system you are
 * [macOS](#macos)
 * [Android](#android)
 
-### Windows
+## Windows
 
 On Windows, there's multiple ways tablets can send inputs to an application. Drawpile has a few different drivers for this. If there's a mismatch between it and your tablet driver, you can get weird effects, such as pressure not working, the eraser on the pen not being (un)detected properly or full-pressure blobs sometimes appearing.
 
@@ -47,17 +47,17 @@ If that doesn't work, toggle it back the other way and restart your computer aga
 
 If that still doesn't work, come ask for help on Discord, the web chat or GitHub. Take a look at [the help page](https://drawpile.net/help/) for links to those.
 
-### Linux
+## Linux
 
 On Linux, usually tablets just work. If not, you may have to install a package such as libwacom on Wayland or xf86-input-wacom on X11. Refer to your distribution's documentation for how to do this.
 
 If you can't get it working, you can ask for help on Discord, in the web chat or GitHub. Take a look at [the help page](https://drawpile.net/help/) for links to those.
 
-### macOS
+## macOS
 
 There's no known issues with tablets on macOS. If you have trouble anyway, ask on Discord, in the web chat or GitHub. Take a look at [the help page](https://drawpile.net/help/) for links to those.
 
-### Android
+## Android
 
 Drawpile will try to recognize if your device has a pen or not and enable touch painting accordingly. If it gets it wrong, you can change it under Edit → Preferences in the Input tab under the "One-finger input" setting. Make sure the touch mode is set to "Touchscreen" if you want to draw by touching.
 
