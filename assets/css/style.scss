@@ -5,3 +5,70 @@
 div.highlighter-rouge {
   margin-bottom: 1rem;
 }
+
+table.compat-chart {
+  border-collapse: collapse;
+  margin: 0 0 1em 1em;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+table.compat-chart thead tr {
+  background: #34495e;
+}
+
+table.compat-chart thead tr th {
+  color: #fff;
+}
+
+table.compat-chart th, table.compat-chart td {
+  font-weight: normal;
+  padding: 6px;
+  color: #fff;
+}
+
+table.compat-chart td, table.compat-chart th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+table.compat-chart td:first-child {
+  text-align: left;
+  color: #000;
+}
+
+table.compat-chart .version-group.even {
+  background: #ecf0f1;
+}
+
+table.compat-chart .version-group.odd {
+  background: #bdc3c7;
+}
+
+table.compat-chart .version-group>.srv.even {
+  background-color: #3498db;
+}
+
+table.compat-chart .version-group.even>.proto {
+  background-color: #9b59b6;
+}
+
+table.compat-chart .version-group.even>.rec {
+  background-color: #f1c40f;
+}
+
+table.compat-chart .version-group>.srv.odd {
+  background-color: #2980b9;
+}
+
+table.compat-chart .version-group.odd>.proto {
+  background-color: #8e44ad;
+}
+
+table.compat-chart .version-group.odd>.rec {
+  background-color: #f39c12;
+}
+
+table.compat-chart .tip:after {
+  content: "*";
+  cursor: help;
+}
