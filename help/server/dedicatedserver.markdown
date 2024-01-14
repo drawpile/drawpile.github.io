@@ -197,7 +197,7 @@ Do *not* use `cert.pem` instead of `fullchain.pem`. Some systems will be able to
 An easy way to run the server is to use Docker. Try it out:
 
 ```sh
-$ docker run -it --rm -p 27750:27750 askmeaboutloom/drawpile-srv:2.2
+$ docker run -it --rm -p 27750:27750 drawpile/drawpile-srv:2.2
 ```
 
 This will download the server image from docker hub and run the server. The `-p 27750:27750` argument
@@ -210,7 +210,7 @@ $ docker run -dt --name "drawpile-server" \
     -p 27750:27750 -p 127.0.0.1:27780:27780 \
     -v dpsessions:/home/drawpile \
     --restart always \
-    askmeaboutloom/drawpile-srv:2.2 \
+    drawpile/drawpile-srv:2.2 \
     --sessions /home/drawpile/sessions \
     --database /home/drawpile/config.db \
     --web-admin-port 27780 \
