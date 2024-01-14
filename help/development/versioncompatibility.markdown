@@ -17,23 +17,13 @@ tag: help development
     </thead>
     <tbody>
         <tr class="version-group even">
-            <td>2.2 beta 4</td>
-            <td class="srv even" rowspan=11>2.x.x</td>
+            <td>2.2.0</td>
+            <td class="srv even" rowspan=9>2.x.x</td>
             <td class="proto">dp:4.24.0</td>
             <td class="rec even">24.0</td>
         </tr>
         <tr class="version-group odd">
-            <td>2.2 pre-beta 4</td>
-            <td class="proto">dp:4.23.0</td>
-            <td class="rec even">23.0</td>
-        </tr>
-        <tr class="version-group even">
-            <td>2.2 beta 1 to 3</td>
-            <td class="proto">dp:4.22.2</td>
-            <td class="rec even">22.2</td>
-        </tr>
-        <tr class="version-group odd">
-            <td>2.1.4&ndash;2.1.17</td>
+            <td>2.1.4&ndash;2.1.20</td>
             <td class="proto" rowspan=4>dp:4.21.2</td>
             <td class="rec even" rowspan=4>21.2</td>
         </tr>
