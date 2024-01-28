@@ -49,7 +49,7 @@ The following are build-time dependencies, but they are not required at runtime:
 
 The following are bundled with Drawpile and cannot be provided as a shared external library:
 
-* libmypaint - patched because of [this bug](https://github.com/mypaint/libmypaint/pull/186){:target="_blank"} that ruins smudging. **Do not attempt to replace it with the stock version of the library, it makes it impossible to use MyPaint brushes in Drawpile correctly, which is a *critical* feature.**
+* libmypaint - patched because of [this bug](https://github.com/mypaint/libmypaint/pull/186){:target="_blank"} that ruins smudging and adds limits to dab counts where high values cause chugging for other users. **Do not attempt to replace it with the stock version of the library, it makes it impossible to use MyPaint brushes in Drawpile correctly, which is a *critical* feature.**
 * jo\_gifx - totally altered from the original, which is not intended for use as a shared library in the first place.
 * psd\_sdk - altered and stripped down from the original, which is not intended for use as a shared library in the first place.
 * qgrayraster - altered and stripped down from the original, which is a Qt-internal thing that isn't provided separately.
