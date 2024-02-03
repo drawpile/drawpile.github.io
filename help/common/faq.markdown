@@ -100,6 +100,12 @@ Drawpile preserves alpha for blend modes other than Normal and Erase. You may be
 
 For more information, check out [the full article on alpha preserve](/help/draw/clipping).
 
+### How can I use clipping groups/inherit alpha in Drawpile?
+
+In short: put your layer in a layer group, put another layer on top and set its blend mode to anything other than Normal. Recolor is like Normal but with alpha preserve.
+
+For a long explanation, take a look at [the full article on alpha preserve](/help/draw/clipping).
+
 ### How can I alpha lock a layer?
 
 In Drawpile, you alpha lock your brush, not the layer. For classic brushes, you do this by changing the brush's mode from Normal to Recolor. For MyPaint brushes, activate the lock button.
