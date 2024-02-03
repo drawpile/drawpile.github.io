@@ -141,4 +141,6 @@ This is done through File → Import → Import Drawpile 2.1 Animation. In the f
 
 Your frames will be put into layer groups, fixed layers will be placed outside of them. For most normal animations, this will lead to one track and layer group for the frames, with the fixed frames above and below it.
 
+At the time of writing, Drawpile does not have a way to import animation frames. You can work around this by importing your frames into another program that supports ORA files. For example, in GIMP, you can use File → Open as Layers and then export the result into an ORA file, which in turn you import into Drawpile as a 2.1 animation.
+
 ![Animation import dialog]({{ "/assets/img/help/animationimport.webp" | relative_url }})
