@@ -199,3 +199,15 @@ Repository: [listserver](https://github.com/drawpile/listserver){:target="_blank
 Tech: Go, SQLite (for the listserver); TypeScript, Lit (for the Web UI)
 
 [GitHub Issue](https://github.com/drawpile/listserver/issues/6){:target="_blank"}
+
+### Documenting the Chrome Wintab Plugin API
+
+Browsers only support pressure through Windows Ink on Windows. There's [this Chrome plugin](https://chromewebstore.google.com/detail/stylus-pressure/ecelnbeiglepohnlccefodfpmedepoll) that allows using WinTab devices in the browser.
+
+To support this, the API exposed to JavaScript needs to be documented according to [clean room design](https://en.wikipedia.org/wiki/Clean_room_design). That is, *only* document the API,  provide absolutely no further information. Do not provide a sample implementation or anything of that sort, document only the absolute minimum that is needed, otherwise the information can't be used.
+
+Repository: none.
+
+Tech: JavaScript, Windows.
+
+This doesn't currently have a GitHub issue.
