@@ -19,3 +19,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og/logo.png
