@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Frequently Asked Questions"
+description: "Answers to common questions about Drawpile."
 date: 2023-09-29 00:00:00 +0200
 category: "help"
 tag: help common

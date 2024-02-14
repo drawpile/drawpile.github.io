@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "Flood Fill Tool"
+description: "How to use the flood fill tool in Drawpile."
 date: 2024-02-03 00:00:00 +0200
 category: "help"
 tag: help draw

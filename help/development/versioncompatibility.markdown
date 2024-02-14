@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Version Compatibility"
+description: "How Drawpile's versioning works and which ones are compatible with each other."
 date: 2023-12-16 00:00:00 +0200
 category: "help"
 tag: help development

@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Network Protocol"
+description: "How Drawpile's network message protocol works."
 date: 2023-12-16 00:00:00 +0200
 category: "help"
 tag: help development

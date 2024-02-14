@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Alpha-Erhalt, Clipping-Gruppen, Masken, Alpha-Sperre"
+description: "Wie Alpha, Clipping, Masken etc. in Drawpile funktionieren."
 date: 2023-11-19 00:00:00 +0100
 category: "help"
 tag: help draw lang_de

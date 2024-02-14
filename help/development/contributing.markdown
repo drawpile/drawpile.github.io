@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "Contributing"
+description: "How you can contribute to Drawpile, both code- and otherwise."
 date: 2024-02-10 00:00:00 +0200
 category: "help"
 tag: help development

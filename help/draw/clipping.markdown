@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Alpha Preserve, Clipping Groups, Masks, Alpha Lock"
+description: "How alpha perservation, clipping, masks and locking work Drawpile."
 date: 2023-09-17 00:00:00 +0200
 category: "help"
 tag: help draw

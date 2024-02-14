@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "Dedicated Server"
+description: "How to use drawpile-srv, Drawpile's dedicated server."
 date: 2024-01-13 00:00:00 +0200
 category: "help"
 tag: help server

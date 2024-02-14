@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "External Authentication"
+description: "Technical documentation on how Drawpile's external authentication works."
 date: 2024-01-10 00:00:00 +0200
 category: "help"
 tag: help tech

@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "Running Public Sessions"
+description: "Help and tips on how to run Drawpile sessions that are open to the public."
 date: 2024-02-02 00:00:00 +0200
 category: "help"
 tag: help server

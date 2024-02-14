@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "Animation"
+description: "How to animate in Drawpile."
 date: 2024-01-31 00:00:00 +0200
 category: "help"
 tag: help draw

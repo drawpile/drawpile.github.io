@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Building from Source"
+description: "How to build Drawpile from its source code."
 date: 2023-12-16 00:00:00 +0200
 category: "help"
 tag: help development

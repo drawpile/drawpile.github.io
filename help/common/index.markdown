@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "Common Topics"
+description: "General help articles for the most common operations."
 date: 2023-11-29 00:00:00 +0200
 category: "help"
 tag: help

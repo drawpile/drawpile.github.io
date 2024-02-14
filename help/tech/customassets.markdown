@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Customizing Sounds, Icons and Themes"
+description: "How to customize how Drawpile looks, feels and sounds."
 date: 2023-10-21 00:00:00 +0200
 category: "help"
 tag: help tech

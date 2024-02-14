@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Hosting Sessions"
+description: "How to host drawing sessions in Drawpile."
 date: 2023-09-29 00:00:00 +0200
 category: "help"
 tag: help common

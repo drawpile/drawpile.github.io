@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "Web Browser Client"
+description: "Documentation on Drawpile's web browser version."
 date: 2024-01-10 00:00:00 +0200
 category: "help"
 tag: help tech

@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title: "Server Setup with Docker"
+description: "How to set up a dedicated Drawpile server using the all-in-one Docker script."
 date: 2024-01-13 00:00:00 +0200
 category: "help"
 tag: help server

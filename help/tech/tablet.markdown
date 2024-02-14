@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Tablet Setup and Troubleshooting"
+description: "Help with tablet issues in Drawpile."
 date: 2023-10-26 00:00:00 +0200
 category: "help"
 tag: help tech

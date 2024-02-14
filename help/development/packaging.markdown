@@ -1,6 +1,7 @@
 ---
 layout: drawpile_help
 title:  "Notes for Packagers"
+description: "A document directed at people who want to package Drawpile for a Linux distribution or similar."
 date: 2023-12-16 00:00:00 +0200
 category: "help"
 tag: help development
