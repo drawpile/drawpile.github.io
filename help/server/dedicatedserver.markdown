@@ -364,7 +364,7 @@ To enable logins using drawpile.net accounts on your server, use these settings:
  * `--extauth https://drawpile.net/api/ext-auth/`
  * `extauthkey = 9eJ2tMJlqgSqHOIK/GI/qzS14WqIxHeB1Im5Hs/CCCk=`
 
-If you wish to implement your own authentication server, refer to [the ext-auth help page](extauth).
+If you wish to implement your own authentication server, refer to [the ext-auth help page](/help/tech/extauth).
 
 
 ## Remote admin
