@@ -26,7 +26,7 @@ You can now make Drawpile react to the eraser on your pen by switching the curre
 
 In the browser, switching the current brush to erase mode is the only option available. The browser only reports that you are using the eraser while you're actually pressing it down, but not when it's brought into proximity, so this is the only sane way to handle it.
 
-![Experimental scaling preferences]({{ "/assets/img/2024-01-28_scaling.webp" | relative_url }})
+![Eraser actions preferences]({{ "/assets/img/2024-01-28_eraser.webp" | relative_url }})
 
 ## Web Browser Client Work
 
