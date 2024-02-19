@@ -61,7 +61,7 @@ Also, considerer joining [Discord](https://drawpile.net/discord/){:target="_blan
 
 When making a selection and then zooming out very far, the arrows on the corners start getting cut off, I guess because the selection item's bounding box is not calculated correctly when zoom gets involved.
 
-Also, those handles sometimes annoyingly difficult to hit. The area in which they can be clicked on should be made larger and there should be some visual indication when hovering over one of them (e.g. by drawing them with 50% opacity by default and when you hover over them you draw with 100% opacity and/or changing the cursor to some kind of grabby hand) to make it clear that you're actualyl going to hit them.
+Also, those handles sometimes annoyingly difficult to hit. The area in which they can be clicked on should be made larger and there should be some visual indication when hovering over one of them (e.g. by drawing them with 50% opacity by default and when you hover over them you draw with 100% opacity and/or changing the cursor to some kind of grabby hand) to make it clear that you're actually going to hit them.
 
 This is a good starter issue, since it's small and self-contained to a single component.
 
@@ -159,7 +159,7 @@ The Drawpile server has proper integrations to run it as a systemd service, but 
 
 Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
 
-Tech: WiX Toolkit, MSI, Windows.
+Tech: Windows, C++, Qt.
 
 [GitHub Issue](https://github.com/drawpile/Drawpile/issues/463){:target="_blank"}
 
