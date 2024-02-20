@@ -72,3 +72,11 @@ table.compat-chart .tip:after {
   content: "*";
   cursor: help;
 }
+
+#markdown-toc {
+  background-color: #fafafa;
+  border-radius: 4px;
+  list-style-position: inside;
+  margin-left: 0;
+  padding: 1em;
+}

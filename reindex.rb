@@ -94,33 +94,3 @@ all.close()
 menu.close()
 weball.close()
 webmenu.close()
-
-
-faqtoc = File.open(File.join(__dir__, '_includes/help/faqtoc.html'), mode: 'w')
-faqtoc.puts(%q(<ul>));
-faqdepth = 2
-for line in IO.foreach((File.join(__dir__, '/help/common/faq.markdown')))
-  if line =~ /^(#+)\s*(.+?)\s*\z/
-    depth = $1.length
-    title = $2
-    anchor = title.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase()
-
-    while faqdepth > depth
-      faqtoc.puts(%q(</ul>))
-      faqdepth -= 1
-    end
-
-    while faqdepth < depth
-      faqtoc.puts(%q(<ul>))
-      faqdepth += 1
-    end
-
-    faqtoc.puts(%Q(<li><a href="##{anchor}">#{title}</a></li>))
-  end
-end
-while faqdepth > 2
-  faqtoc.puts(%q(</ul>))
-  faqdepth -= 1
-end
-faqtoc.puts(%q(</ul>));
-faqtoc.close()

@@ -9,7 +9,8 @@ tag: help common
 
 If you don't find an answer to your question here, either check out the other help articles on the site or ask in Discord, the web chat or on GitHub! You can find links to those [on the main help page](https://drawpile.net/help/).
 
-{% include help/faqtoc.html %}
+* Table of contents
+{:toc}
 
 ## Tablets
 
