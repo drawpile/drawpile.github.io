@@ -11,6 +11,9 @@ Drawpile lets you animate, coming with a timeline, onion skins and a flipbook to
 
 **Note:** Almost all actions on the timeline have keyboard shortcuts. Since they are different depending on your operating system, the default shortcuts aren't listed in this documentation, but the menu actions will show what combination they are assigned to next to them. You can change the key bindings in Drawpile's preferences.
 
+* Table of contents
+{:toc}
+
 ## Quick Start
 
 Here's a quick rundown on how to get started animating. Later sections will go into more detail.
