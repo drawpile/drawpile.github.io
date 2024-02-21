@@ -77,6 +77,7 @@ Docker-compose is used to manage the actual server processes. Out of the box, th
  * A web server
  * Let's Encrypt SSL certificate for the web server
  * [Web admin](https://github.com/drawpile/dpwebadmin)
+ * WebSocket support for the web browser version of Drawpile
 
 See the [readme file](https://github.com/drawpile/dpserver/blob/master/README.md) for more information on how to customize the server package. For example, if you already have a web server, you will not want to use the nginx server included in the docker-compose file.
 
