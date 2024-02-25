@@ -179,11 +179,40 @@ The above does the following things:
 
 ## Using systemd
 
-Drawpile server can be started in two ways using systemd. The server can be started directly with `systemctl start drawpile-srv` or by socket activation using `systemctl start drawpile-srv.socket`. When socket activation is used, the server is started on-demand when the first client connects. Note that when using SA, the `--port` and `--listen` parameters are ignored. The listening address is configured in the `drawpile-srv.socket` unit file. The first socket provided is the TCP port, the second one is the web admin port, the third is the WebSocket port.
+To use systemd support in drawpile-srv, you must have `libsystemd-dev` or similar installed and build it with `-DINITSYS=systemd`. Doing so will install `drawpile-srv.service` and `drawpile-srv.socket`.
+
+After installing it, you must set up an override file for it to configure it properly. To do so, run `sudo systemctl edit drawpile-srv.service` and set it up as follows. **Make sure you replace the following:**
+
+* `***parameters-go-here***` with any command-line parameters you want to pass to drawpile-srv.
+* `***linux-user***` with the Linux username under which the server should run. You should create a new user for this!
+* `***linux-group***` with the Linux group, probably the same as the username.
+* `***web-admin-username***` and `***web-admin-password***` with a username and password of your choosing to access the web admin API.
+
+```systemd
+[Service]
+ExecStart=
+ExecStart=/usr/local/bin/drawpile-srv ***parameters-go-here***
+User=
+User=***linux-user***
+Group=
+Group=***linux-group***
+Environment=DRAWPILESRV_WEB_ADMIN_AUTH=***web-admin-username***:***web-admin-password***
+```
+
+The server can be started directly with `systemctl start drawpile-srv` or by socket activation using `systemctl start drawpile-srv.socket`. When socket activation is used, the server is started on-demand when the first client connects. Note that when using SA, the `--port` and `--listen` parameters are ignored. The listening address is configured in the `drawpile-srv.socket` unit file. The first socket provided is the TCP port, the second one is the web admin port, the third is the WebSocket port.
 
 Use `systemctl enable drawpile-srv` or `systemctl enable drawpile-srv.socket` to automatically start the server on boot.
 
-The current server AppImage does not have systemd support compiled in, so it does not support socket activation. Here is a sample unit file that works with it (place in `/etc/systemd/system/drawpile-srv.service`):
+## Using the AppImage with systemd
+
+The current server AppImage does not have systemd support compiled in, so it does not support socket activation, but you can run it via systemd anyway.
+
+You can use is a sample unit file that works with it, place it in `/etc/systemd/system/drawpile-srv.service`. **Make sure you replace the following:**
+
+* `***parameters-go-here***` with any command-line parameters you want to pass to drawpile-srv.
+* `***linux-user***` with the Linux username under which the server should run. You should create a new user for this!
+* `***linux-group***` with the Linux group, probably the same as the username.
+* `***web-admin-username***` and `***web-admin-password***` with a username and password of your choosing to access the web admin API.
 
 ```systemd
 [Unit]
@@ -192,18 +221,18 @@ After=network.target
 Documentation=man:drawpile-srv
 
 [Service]
-ExecStart=/home/my_server/drawpile-srv -d /home/my_server/settings.db
+ExecStart=/usr/local/bin/Drawpile.AppImage --server ***parameters-go-here***
 Type=simple
 Restart=always
-User=my_server
+User=***linux-user***
+Group=***linux-group***
+Environment=DRAWPILESRV_WEB_ADMIN_AUTH=***web-admin-username***:***web-admin-password***
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-Replace `my_server` with the username you will run the server as.
-Best practice is to create a user just for running the server.
-Note that for security reasons, the server will not run as root!
+Use `systemctl enable drawpile-srv` to automatically start the server on boot.
 
 ## Persistent Sessions
 
