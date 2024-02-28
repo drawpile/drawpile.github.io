@@ -60,9 +60,10 @@ location /drawpile-web/ws {
     # This if block is optional, but recommended. WebSockets don't have a
     # same-origin policy, so without checking the origin, any website can
     # make a connection. Also, DO NOT change this to your own hostname, it
-    # will make the client on web.drawpile.net stop working. If you want to
-    # allow other origins, you can add them here of course.
-    if ($http_origin != "https://web.drawpile.net") {
+    # will make the client on web.drawpile.net and the Chinese mirror on
+    # web.foxdice.cn stop working. If you want to allow other origins, you
+    # can add them here of course.
+    if ($http_origin !~ "^https://web\.(drawpile\.net|foxdice\.cn)$") {
         return 403;
     }
     # Same port as you passed to drawpile-srv via --websocket-port.
