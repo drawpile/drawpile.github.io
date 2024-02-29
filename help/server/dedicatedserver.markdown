@@ -199,9 +199,9 @@ Group=***linux-group***
 Environment=DRAWPILESRV_WEB_ADMIN_AUTH=***web-admin-username***:***web-admin-password***
 ```
 
-The server can be started directly with `systemctl start drawpile-srv` or by socket activation using `systemctl start drawpile-srv.socket`. When socket activation is used, the server is started on-demand when the first client connects. Note that when using SA, the `--port` and `--listen` parameters are ignored. The listening address is configured in the `drawpile-srv.socket` unit file. The first socket provided is the TCP port, the second one is the web admin port, the third is the WebSocket port.
+The server can be started directly with `systemctl start drawpile-srv.service` or by socket activation using `systemctl start drawpile-srv.socket`. When socket activation is used, the server is started on-demand when the first client connects. Note that when using SA, the `--port` and `--listen` parameters are ignored. The listening address is configured in the `drawpile-srv.socket` unit file. The first socket provided is the TCP port, the second one is the web admin port, the third is the WebSocket port.
 
-Use `systemctl enable drawpile-srv` or `systemctl enable drawpile-srv.socket` to automatically start the server on boot.
+Use `systemctl enable drawpile-srv.service` to automatically start the server on boot. This will enable socket activation automatically. If you don't want that, disable it using `systemctl disable drawpile-srv.socket`. (This will probably change in the future, since it's annoying to have to enable both and then disable one.)
 
 ## Using the AppImage with systemd
 
