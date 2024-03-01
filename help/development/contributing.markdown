@@ -11,6 +11,9 @@ This is supposed to be a list of good spots for people looking to contribute to 
 
 Note that this list isn't necessarily super up to date, it's last been updated on February 10, 2024. If you want to contribute something and this date is far in the past, consider giving a poke so that this list can be updated, you can find out how to get in contact [on the main help page](https://drawpile.net/help/){:target="_blank"}.
 
+* Table of contents
+{:toc}
+
 ## Non-Code Stuff
 
 These are things that don't require you to be a software developer. Some things are still technical, others less so.
