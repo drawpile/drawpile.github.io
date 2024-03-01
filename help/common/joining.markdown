@@ -19,6 +19,14 @@ Depending on the link, you may be able to just click on it and will be prompted 
 
 ![Join page]({{ "/assets/img/help/joindialog.webp" | relative_url }})
 
+### Joining via Web Browser
+
+If the server you're drawing on supports it and allows it the session in question, the web invite link you copy will automatically have a button to join via web browser.
+
+Take a look at [the communities page](https://drawpile.net/communities/) to find out how Drawpile's official community servers handle joining via web browser. Currently most of them either allow it for sessions with a password or don't have it enabled yet. If the server you're using is not listed, ask the server owner.
+
+![Invite page with web browser join button]({{ "/assets/img/help/webinvite.webp" | relative_url }})
+
 ## Listings
 
 Listings are mostly useful for public sessions without a password on them, allowing anyone to join in and draw. Drawpile lets you browse through listed sessions in the applications in the **Browse** tab in the start dialog. If you closed that, you can get back to it via Session → Browse.
