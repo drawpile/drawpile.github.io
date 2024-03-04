@@ -1,0 +1,49 @@
+---
+layout: drawpile_post
+title: "Solving Session Resets"
+date: 2024-03-04 00:00:00 +0100
+category: "devblog"
+tag: "@askmeaboutloom"
+---
+
+Session auto-resets are something that happens when using Drawpile's dedicated server. Everything stops for a bit, then the canvas rebuilds itself and you can continue drawing.
+
+The reason this happens is because the Drawpile server is a "thin" or "dumb" server. It only understands a small part of the network protocol, such as changing session settings, giving someone operator or trusted permission or sending chat messages. It has no concept of anything related to actually drawing, it just puts all drawing commands into a list and sends it to everyone connected to the session.
+
+This has several significant advantages. For one, it makes the server very lightweight. Since it doesn't need to process any heavy drawing operations, you can run it on a tiny virtual server or even something like a Raspberry Pi without it breaking a sweat. It also allows it to be forward- and backward compatible. As long as the small part of the network protocol that the server understands doesn't change, it works fine for any sessions hosted on it.
+
+However, this is what makes session resets necessary. Since the server just puts every drawing command into a list, that list keeps getting bigger the longer the session keeps running. If this continues unchecked, it will eventually reach the size limit set by the server owner and then the session will no longer accept any commands. To prevent that from happening, the server will perform an auto-reset. This involves throwing away the big list of commands and instead replacing it with the current state of the canvas. This state is usually smaller, since it only contains pixels in a compressed format instead of every single brush stroke along the way.
+
+The problem here is that the server can't do an auto-reset on its own. It doesn't understand any drawing commands, so it has no clue what the current state of the canvas even is. So it has to ask the clients connected to the session for help. It sends out a call for an auto-reset and whichever session operator responds to it first will send the current state of the canvas to the server. Depending on how fast their computer and connection is, this can take a while. And then everyone else is sent the current state of the canvas again, which may take another while, depending on their connection.
+
+This is a pretty annoying occurrence, since it stops your drawing dead in its tracks. It's also kind of silly, since you have to wait for the canvas to restore itself to the same state it's already in. So how could this be solved?
+
+## Thick Server Solution
+
+One way to solve it would be to use a "thick" or "smart" server. It would mean that the server actually understands what's being drawn. This removes the problem altogether, since it now knows the state of the canvas on its own. This solution also already exists: when you host "on this computer", you're using the built-in server, which is just attached to the host's canvas.
+
+However, the big disadvantage is that this is *much* heavier on server resources and ruins compatibility. You'd need a much beefier machine to run a server that processes the drawing commands and you could only run a single Drawpile version on it. So it's really not a very practical solution for replacing the thin server.
+
+## Single-Client Solution
+
+As mentioned before, it's kind of silly that *everyone* is prevented from drawing just because they're waiting for one client to reset the canvas. After all, nothing really changes, you just wait for the canvas to look the same as it was.
+
+So instead, the server could just single out one client to reset the canvas. They will be tasked with sending the new state while everyone else continues to draw. Once that's done, the server replaces the beginning of the big list of drawing commands with the new state, puts the stuff that happened since then at the end and the session keeps going.
+
+This solution would be pretty nice, since it would cut down on the disruption for resets and avoid a bunch of pointless data to be sent to every client. The downside is that it's complicated and has many exciting error situations. Resets taking so long that the session runs out of space, the client disappearing during the reset or desynchronization between clients. However, those are things that can be solved.
+
+## Server-Side Reset Solution
+
+Instead of the server itself handling resets or a asking a client to do it, it could just as well be another program that does it. This program kind of already exists, it's called `drawpile-cmd`, it eats drawing commands and spits out (for example) an ORA file from it. The server could simply run this program, dump all the drawing commands of the session into it and get the current state of the canvas back out to perform a reset.
+
+This is still heavy performance-wise, but instead of constantly using up processing power and memory in the server itself, it would just be a somewhat brief spike of heavy processing before going back to cruising levels. Especially virtual servers are better at this kind of thing, since they only get a temporary share of physical hardware.
+
+Since it's another program, it's also not tied to the server version. You could simply have multiple different programs around, one for each Drawpile version, and the server picks the one appropriate. If there's no fitting version around, it can fall back to asking a client instead.
+
+While this cuts out the network traffic, turning drawing commands into a finished canvas can take a significant amount of time. So this is probably a solution that would need to be mixed with the single-client solution above, letting everyone continue drawing while the program crunches away in the background.
+
+## Conclusion
+
+There'll probably be work toward the single-client solution, since that's something every server could make use of and it would cut down on the annoyance of resets significantly.
+
+The server-side reset would be nice to have on top of that, especially for servers that have enough power in reserve anyway. It's unlikely that the official community servers will be making available (at least not for free) because they need to handle quite a lot of people drawing on them simultaneously and the hardware costs would just be so much higher.
