@@ -42,9 +42,15 @@ If none of the options work, you may have to toggle the Windows Ink or Wintab op
 
 ![Wacom Tablet Properties Windows Ink option]({{ "/assets/img/help/wacomwinink.webp" | relative_url }})
 
-Toggle the setting off if it's on or vice-versa. Restart Drawpile and try all the options in the Tablet Drivers menu again. If that doesn't work, restart your computer and try again, sometimes tablets fail to apply their settings without it.
+Toggle the setting off if it's on or vice-versa. Restart Drawpile and try all the options in the Tablet Drivers menu again.
 
-If that doesn't work, toggle it back the other way and restart your computer again. It's pretty silly, but especially Huion tablets often suddenly start working if Windows Ink and Wintab are toggled back and forth like this.
+On **Huion tablets**, try changing the pressure curve in the Huion driver settings slightly. You can find this under the "Digital Pen" tab under "Pressure Sensitivity Adjustment" (see screenshot below.) This inexplicably fixes issue sometimes.
+
+![Huion Pressure Sensitivity Adjustment]({{ "/assets/img/help/huion.webp" | relative_url }})
+
+If none of that works, restart your computer and try again, sometimes tablets fail to apply their settings without it.
+
+If that doesn't work, toggle it back the other way and restart your computer again. It's pretty silly, but some tablets (especially Huion) often suddenly start working if Windows Ink and Wintab are toggled back and forth like this.
 
 If that still doesn't work, come ask for help on Discord, the web chat or GitHub. Take a look at [the help page](https://drawpile.net/help/) for links to those.
 
