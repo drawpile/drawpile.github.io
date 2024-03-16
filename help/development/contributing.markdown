@@ -204,14 +204,18 @@ Tech: Go, SQLite (for the listserver); TypeScript, Lit (for the Web UI)
 
 [GitHub Issue](https://github.com/drawpile/listserver/issues/6){:target="_blank"}
 
-### Documenting the Chrome Wintab Plugin API
+### Wintab in the Browser
 
-Browsers only support pressure through Windows Ink on Windows. There's [this Chrome plugin](https://chromewebstore.google.com/detail/stylus-pressure/ecelnbeiglepohnlccefodfpmedepoll) that allows using WinTab devices in the browser.
+Browsers only support pressure through Windows Ink on Windows. There's [this Chrome plugin](https://github.com/Agamnentzar/chrome-stylus-pressure) that allows using Wintab.
 
-To support this, the API exposed to JavaScript needs to be documented according to [clean room design](https://en.wikipedia.org/wiki/Clean_room_design). That is, *only* document the API,  provide absolutely no further information. Do not provide a sample implementation or anything of that sort, document only the absolute minimum that is needed, otherwise the information can't be used.
+The plugin has the allowed websites hard-coded, so a custom Drawpile version of it needs to be built. Ideally, it the plugin should be patched so that any website to use the plugin so that we don't perpetuate this same problem.
 
-Repository: none.
+Then the plugin needs to be integrated into the browser version of Drawpile by patching it into Qt.
 
-Tech: JavaScript, Windows.
+We only care about the Windows part of that plugin. The Linux part is irrelevant nowadays.
+
+Repository: <https://github.com/Agamnentzar/chrome-stylus-pressure> (needs a fork)
+
+Tech: JavaScript, C++, Windows.
 
 This doesn't currently have a GitHub issue.
