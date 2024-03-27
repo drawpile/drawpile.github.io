@@ -61,7 +61,7 @@ Don't hesitate to ask for help if you're having trouble, you can find multiple p
     3. **Do not click around in the window.** Only click the title bar or the entry in the task bar. Else it will get stuck until you press the escape key. You know if you got into this state if it says "Select" in the title bar of the window.
     4. **Don't try to copy stuff out of the window.** That will almost always get it stuck and/or kill whatever is currently running. Just take a screenshot instead if you want to show someone what it says.
 3. Install vcpkg:
-    1. Run `cd /D C:\` (type it into the command line window and hit enter) to switch to the root of the C drive.
+    1. Run `cd /D C:\` (type it into the command line window and hit enter) to switch to the root of the C drive. (Note: don't try to be experimental and put it into a different directory. It's very fragile. If the path is too long, contains a symlink or a space anywhere, vcpkg will not work properly. Save yourself the wasted time and just put it into the root of your C drive.)
     2. Then run `git clone https://github.com/Microsoft/vcpkg.git` to get vcpkg.
     3. Then `.\vcpkg\bootstrap-vcpkg.bat -disableMetrics` to set up vcpkg.
 4. Install the dependencies:
@@ -78,6 +78,8 @@ Don't hesitate to ask for help if you're having trouble, you can find multiple p
     5. Build it: `cmake --build build` - this takes a few minutes the first time around.
     6. Install it: `cmake --install build` - this won't overwrite any existing installation of Drawpile, it will just put the stuff you built and the DLLs, icons  and such together so that you can actually run it.
 6. Run what you built. The executable should be at `C:\Users\<YOUR NAME>\Drawpile\install\drawpile.exe`
+
+Sometimes cmake fails to generate the PDB paths (debug info stuff.) If that happens and you need them, delete the build directory and try again.
 
 ## Android
 
