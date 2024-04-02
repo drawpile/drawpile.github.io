@@ -75,6 +75,8 @@ location /drawpile-web/ws {
 }
 ```
 
+Note that if you have any kind of `proxy_pass_*` directives in the root of the `server` block, you probably have to revert them inside of the above `location` block. For example if there's a `proxy_pass_request_headers off;` at the root, you need to add `proxy_pass_request_headers on;` to Drawpile's `location` block.
+
 Other web servers should work similarly, refer to their documentation on how to set up a WebSocket reverse proxy for them.
 
 ### Trying It Out
