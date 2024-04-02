@@ -25,7 +25,7 @@ Compiling software on Linux is usually pretty easy, the setup should only take a
 
 The following instructions should work on **Ubuntu**, **Debian** and anything based on them. For other distributions, you'll have to find the matching dependencies for the stuff listed in step 1. If you need help with this (or anything else), take a look at [the help page](https://drawpile.net/help/) on how to get in touch.
 
-1. Open a terminal and run `sudo apt install build-essential cmake git libqt6svg6 qt6-base-dev qt6-multimedia-dev qt6-tools-dev libxkbcommon-dev libzip-dev zipcmp zipmerge ziptool libmicrohttpd-dev libsodium-dev libsystemd-dev qtkeychain-qt6-dev`
+1. Open a terminal and run `sudo apt install build-essential cmake git libqt6svg6 qt6-base-dev qt6-multimedia-dev qt6-tools-dev qt6-websockets-dev libxkbcommon-dev libzip-dev zipcmp zipmerge ziptool libmicrohttpd-dev libsodium-dev libsystemd-dev qtkeychain-qt6-dev`
 2. [Install Rust](https://www.rust-lang.org/tools/install){:target="_blank"}
 3. Run `git clone https://github.com/drawpile/Drawpile.git` to clone Drawpile
 4. Run `cd Drawpile` to switch into the directory you just cloned
@@ -66,7 +66,7 @@ Don't hesitate to ask for help if you're having trouble, you can find multiple p
     3. Then `.\vcpkg\bootstrap-vcpkg.bat -disableMetrics` to set up vcpkg.
 4. Install the dependencies:
     1. This step takes really long to complete. Again, make sure you have at least 50 GB of free disk space.
-    2. Run `vcpkg --disable-metrics install --clean-after-build qt5-base:x64-windows qt5-multimedia:x64-windows qt5-svg:x64-windows qt5-tools:x64-windows qt5-translations:x64-windows kf5archive:x64-windows libmicrohttpd:x64-windows libsodium:x64-windows qtkeychain:x64-windows` to install the dependencies.
+    2. Run `vcpkg --disable-metrics install --clean-after-build qt5-base:x64-windows qt5-multimedia:x64-windows qt5-svg:x64-windows qt5-tools:x64-windows qt5-translations:x64-windows qt5-websockets:x64-windows kf5archive:x64-windows libmicrohttpd:x64-windows libsodium:x64-windows qtkeychain:x64-windows` to install the dependencies.
     3. Go do something else for the next several hours while it installs everything.
 5. Build Drawpile:
     1. Run `cd /D %HOMEDRIVE%%HOMEPATH%` to switch to your home directory. It is probably under `C:\Users\<YOUR NAME>`.
@@ -76,7 +76,7 @@ Don't hesitate to ask for help if you're having trouble, you can find multiple p
         * `cmake --preset windows-x64-debug-qt5-all-ninja` if you want develop on Drawpile
         * `cmake --preset windows-x64-release-qt5-all-ninja` to build everything for use on a desktop
     5. Build it: `cmake --build build` - this takes a few minutes the first time around.
-    6. Install it: `cmake --install build` - this won't overwrite any existing installation of Drawpile, it will just put the stuff you built and the DLLs, icons  and such together so that you can actually run it.
+    6. Install it: `cmake --install build` - this won't overwrite any existing installation of Drawpile, it will just put the stuff you built and the DLLs, icons and such together so that you can actually run it.
 6. Run what you built. The executable should be at `C:\Users\<YOUR NAME>\Drawpile\install\drawpile.exe`
 
 Sometimes cmake fails to generate the PDB paths (debug info stuff.) If that happens and you need them, delete the build directory and try again.
