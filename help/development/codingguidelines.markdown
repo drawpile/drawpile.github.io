@@ -1,34 +1,37 @@
 ---
 layout: drawpile_help
 title: Coding Guideline
-description: Drawpile Code Contribution Guideline
+description: "Drawpile code contribution guidelines."
 date: 2024-03-30 00:00:00 +0200
 category: help
 tag: help development
 ---
 
-This page contains a general guideline for development contribution in Drawpile.
+This page contains a general guideline for development contributions to Drawpile.
+
+Read [the architecture page](architecture) to become familiar with the different components, and check out [the contributing page](contributing) for general guidelines.
 
 * Table of contents
 {:toc}
 
-## Good Practices
+## Organizing
 
 Get in contact! Be it [on IRC](https://drawpile.net/irc/){:target="_blank"}, [on Discord](https://drawpile.net/discord/){:target="_blank"} or [in the GitHub Issues](https://github.com/drawpile/Drawpile/issues){:target="_blank"}.
 
-If you'd like to take on a task, we strongly recommend getting in contact with us and the other developers in our community, to avoid conflicts or potentially working on something that is already being worked on.
-This is especially important when it comes to the network protocol or similar pillar components, because haphazardly merged changes can cause almost irreversible issues in the long run, if left unnoticed. These changes require not only coordination, but also thorough testing and feedback.
+If you'd like to take on a task, we strongly recommend getting in contact with us and the other developers in our community, to avoid conflicts or potentially working on something that is already being worked on. This is especially important when it comes to the network protocol or similar pillar components because of the potential for merge conflicts, which can be avoided if we know that you're working on something.
 
-Read [the architecture page](architecture) to become familiar with the different components, and check out [the contributing page](contributing) for general guidelines.
+## Code Style
 
-* Auto-format code.
+Auto-format code.
+
 Use clang-format for C & C++, rustfmt for Rust, gofmt for Go, Prettier for JavaScript and TypeScript, black for Python.
 Some files aren't auto-formatted yet. When you make changes to them, either leave them be and make your new code follow the ambient format or auto-format them in a separate commit.
 
-* Remember to insert a `SPDX-License-Identifier` comment at the beginning of your files.
-For the parts that still use large & verbose comment block, either leave them be or replace them with an SPDX comment.
+Insert a `SPDX-License-Identifier` comment at the beginning of your files. For the parts that still use large & verbose comment block, either leave them be or replace them with an SPDX comment.
 
-* If you take code from elsewhere, attribute it properly, ideally with an `SPDX-Snippet-` block like so:
+## Attributions
+
+If you take code from elsewhere, attribute it properly, ideally with an `SPDX-Snippet-` block like so:
 
 ```c
 // SPDX-SnippetBegin
@@ -40,22 +43,24 @@ For the parts that still use large & verbose comment block, either leave them be
 // SPDX-SnippetEnd
 ```
 
-* Keep dependencies to an absolute minimum; they are a maintenance burden and make building Drawpile harder, especially in the long run.
+Don't use proprietary code from elsewhere, or any code with an incompatible license.
+
+Avoid GitHub Copilot or any other machine-learning-based tool that will regurgitate someone else's improperly-licensed code.
+
+## Dependencies
+
+Keep dependencies to an absolute minimum; they are a maintenance burden and make building Drawpile harder, especially in the long run.
 
 Remember that we have to get every dependency to build on a variety of different platforms: Linux (Flatpak & AppImage), macOS, Windows (x86 & x64), Android (arm32 & arm64) and WebAssembly.
 
-* It must be possible to sensibly develop and expand upon them, so the packages should either be available in common Linux distributions / vcpkg, or come bundled.
+It must be possible to sensibly develop and expand upon them, so the packages should either be available in common Linux distributions and vcpkg, or be bundled with Drawpile.
 
 Remember to test and keep things compatible with both Qt5 and Qt6.
 Qt6 has stopped supporting Windows 7 and old Android devices, which we are not willing to cut out. Qt6 also doesn't come with ANGLE anymore, which is required for the OpenGL hardware-accelerated canvas renderer.
 
-## Bad Practices
+## Avoid Troublesome Features
 
-* Don't use proprietary code from elsewhere, or any code with an incompatible license.
-
-* Avoid GitHub Copilot or any other machine-learning-based tool that will regurgitate someone else's improperly-licensed code.
-
-* Avoid & minimize usage of problematic language or framework features;
+The C++ language and the Qt framework have some parts that should either be avoided or used sparingly.
 
 * Avoid exceptions and longjmp. The performance is awful, especially in the browser.
 
@@ -73,7 +78,7 @@ Qt6 has stopped supporting Windows 7 and old Android devices, which we are not w
 
 * Avoid ranges from C++20. They take an eternity to compile.
 
-* Avoid C++ array. It's verbose and produces terrible error messages, just use a C-style array instead.
+* Avoid std::array. It's verbose and produces terrible error messages, just use a C-style array instead.
 
 * Avoid using Qt enums in settings directly, use their integer values instead. The enums are fragile, you can't move or rename them without them breaking. They also break when switching between Qt5 and Qt6.
 
@@ -81,13 +86,18 @@ Qt6 has stopped supporting Windows 7 and old Android devices, which we are not w
 
 * Avoid Qt's synchronization primitives (QMutex & friends) in places where performance matters. On Windows, they are extremely slow. Use DP\_Mutex & friends instead, they wrap the platform's synchronization primitives instead and are much faster.
 
-* Don't write Doxygen/JavaDoc style comments, their structure is too repetitive. If you want to document something in a comment, just write it in plain prose instead.
-
-* Do not design with imaginary future extensibility. Usually this just leads to more complex code that in the end isn't extensible where it's needed. Simpler code is more malleable and can be changed more easily when new requirements come up.
-
 * Using Qt Designer for UIs is mildly discouraged. It's pretty clunky, and often makes a mess of stuff like the tab order, making it harder to figure out where connections are made... and the merge conflicts it generates are virtually unsolvable. However, if it makes your task much easier, feel free to use it.
 
-Note that there's some parts of the code that flagrantly violate the guidelines above. They continue to cause problems and will probably need to be rewritten at some point.
+## Comments
 
-Please don't submit pull requests that only change formatting and nothing else.
-You can adjust the code that you're actually working on, but making sweeping changes usually causes issues.
+Don't write Doxygen/JavaDoc style comments, their structure is too repetitive. If you want to document something in a comment, just write it in plain prose instead.
+
+## You Ain't Gonna Need It
+
+Do not design with imaginary future extensibility. Usually this just leads to more complex code that in the end isn't extensible where it's needed. Simpler code is more malleable and can be changed more easily when new requirements come up.
+
+## Contribution Notes
+
+Some parts of the code that flagrantly violate the guidelines above. They continue to cause problems and will probably need to be rewritten at some point.
+
+Please don't submit pull requests that only change formatting and nothing else. You can adjust the code that you're actually working on, but making sweeping changes usually causes issues.
