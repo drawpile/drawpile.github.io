@@ -67,6 +67,7 @@ Don't hesitate to ask for help if you're having trouble, you can find multiple p
 4. Install the dependencies:
     1. This step takes really long to complete. Again, make sure you have at least 50 GB of free disk space.
     2. Run `vcpkg --disable-metrics install --clean-after-build qt5-base:x64-windows qt5-multimedia:x64-windows qt5-svg:x64-windows qt5-tools:x64-windows qt5-translations:x64-windows qt5-websockets:x64-windows kf5archive:x64-windows libmicrohttpd:x64-windows libsodium:x64-windows qtkeychain:x64-windows` to install the dependencies.
+        * **Note:** as of April 2024, xz is broken in vcpkg. If you get an error about `https://github.com/tukaani-project/xz/archive/v5.4.4.tar.gz` not being available, you have to apply [this workaround](https://github.com/microsoft/vcpkg/issues/37839#issuecomment-2028011285){:target="_blank"} and run the above command again.
     3. Go do something else for the next several hours while it installs everything.
 5. Build Drawpile:
     1. Run `cd /D %HOMEDRIVE%%HOMEPATH%` to switch to your home directory. It is probably under `C:\Users\<YOUR NAME>`.
