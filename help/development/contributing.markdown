@@ -1,221 +1,177 @@
 ---
 layout: drawpile_help
 title: "Contributing"
-description: "How you can contribute to Drawpile, both code- and otherwise."
+description: "How you can contribute to Drawpile, both with code- and without."
 date: 2024-02-10 00:00:00 +0200
 category: "help"
 tag: help development
 ---
+### How to contribute to Drawpile
 
-This is supposed to be a list of good spots for people looking to contribute to Drawpile. This doesn't necessarily encompass stuff where you need to be able to write code, there's plenty of things beyond that!
+If you'd like to contribute to Drawpile, then you've come to the right place.
+Here we will go over a variety of ways you can help the project with development, and without!
 
-Note that this list isn't necessarily super up to date, it's last been updated on February 10, 2024. If you want to contribute something and this date is far in the past, consider giving a poke so that this list can be updated, you can find out how to get in contact [on the main help page](https://drawpile.net/help/){:target="_blank"}.
+If you'd like to take on a task or work on an area, we strongly recommend getting in contact with us and the other members in our community, to avoid conflicts or potentially working on something that is already being worked on.
+This is especially important when it comes to the network protocol or similar pillar components because of the potential for merge conflicts, which can be avoided if we know what you're working on.
+You can find out how to get in contact [on the main help page](https://drawpile.net/help/).
+
+Read [the architecture page](architecture) to become familiar with the different components, and check out our [coding guidelines](https://docs.drawpile.net/help/development/codingguidelines) for general but very useful guidelines.
+
 
 * Table of contents
 {:toc}
 
-## Non-Code Stuff
 
-These are things that don't require you to be a software developer. Some things are still technical, others less so.
+## Non-Development Contribution
+
+These wouldn't require you to be a software developer. Some may still be technical, but a lot less so.
 
 ### Helping Other Users
 
-Users come to ask questions about Drawpile on [Discord](https://drawpile.net/discord/){:target="_blank"} and [libera.chat](https://drawpile.net/irc/){:target="_blank"}. If you know your way around Drawpile and want to help others this way, you can idle around in those places and help respond to those kinds of questions.
+Users come to ask questions about Drawpile on our [Discord](https://drawpile.net/discord/) and [libera.chat](https://drawpile.net/irc/). 
+If you know your way around Drawpile and want to help others this way, you can hang around help respond to those kinds of questions.
 
-### Providing Pictures and Animations
+### Providing Illustrations
 
-You may have noticed that the Drawpile website is pretty thin on pictures. It would be nice to have some for decoration.
+You may have noticed that the Drawpile website is pretty thin on illustrations. It would be great to have some for decoration or to showcase features, issues or bugs!
 
-If you drew any cool pictures, animated something neat or anything in that regard that you would like Drawpile to use for such decorative purposes, in screenshots and such, give a poke about it! You can find out how to get in contact [on the main help page](https://drawpile.net/help/){:target="_blank"}.
+If you've drawn artworks or prepared showcases that you would like Drawpile to us, [contact us](https://drawpile.net/help/)! 
 
-All people that collaborated on the works need to agree to it being used. Ideally, the works should be put under a [Creative Commons license](https://creativecommons.org/share-your-work/), that way there's no need for any special agreements. The works should of course be made at least for the most part in Drawpile and shouldn't contain any canon characters or other intellectual property of that sort.
+The works provided should naturally come with your consent to use, and ideally be put under a [Creative Commons license](https://creativecommons.org/share-your-work/).
+They should of course be made at least for the most part in Drawpile and shouldn't contain any canon characters or intellectual property.
 
 ### Reporting Problems, Suggesting Features
 
-When you find a bug or some other problem or have an idea for a good feature, bring it up! This is how Drawpile improves. Don't worry about reporting duplicates, it doesn't hurt to hear things brought up again and might end up as a good reminder to get to them.
-
-You can find out where to do so [on the main help page](https://drawpile.net/help/){:target="_blank"}.
+When you find a bug or some other problem or have an idea for a good feature, bring it up! This is how Drawpile improves. 
+Don't worry about reporting duplicates, it doesn't hurt to hear things brought up again and might end up as a good reminder to get to them.
+If the matter is already brought up in for example a GitHub issue, feel free to add your thoughts or elaboration to it!
 
 ### Translations
 
-Drawpile is used all across the world, by people speaking many different languages. If you want to translate it into yours or fix something about an existing translation, you can do so [on Weblate](https://hosted.weblate.org/engage/drawpile/){:target="_blank"}. You can see which languages there are already and how complete the translations are. If you don't spot your language, you can add a new one.
+Drawpile is used all across the world, by people speaking many different languages. 
+If you want to translate it into yours or fix something about an existing translation, you can do so [on Weblate](https://hosted.weblate.org/engage/drawpile/).
+You can see which languages there are already and how complete the translations are. If you don't spot your language, you can add a new one.
 
 ### Community Servers
 
-Drawpile has a set of [community servers](https://drawpile.net/communities/){:target="_blank"}. These are servers run by and moderated by people who want to give a space for others to draw. If you have your own Drawpile server that you want to become one of these community servers, you can [submit it here](https://drawpile.net/communities/drawpile.net/ych/){:target="_blank"}.
+Drawpile has a set of [community servers](https://drawpile.net/communities/). These are servers run by and moderated by people who want to give a space for others to draw. 
+If you have your own Drawpile server that you want to become one of these community servers, you can [submit it here](https://drawpile.net/communities/drawpile.net/ych/).
 
-If you want to help moderate existing Drawpile servers, feel free to drop a line too. There's currently no process by which moderators are onboarded, but we can figure something out. You can find out how to get in contact [on the main help page](https://drawpile.net/help/){:target="_blank"}.
+If you want to help moderate existing Drawpile servers, feel free to [contact us](https://drawpile.net/help/). 
 
 ### Documentation
 
-You can contribute to this help page by writing documentation! If you know your way around this kind of techy stuff you can send pull requests [to the drawpile.github.io repository](https://github.com/drawpile/drawpile.github.io). If not, you can just write up an article in your favorite word processor, a Google Doc or whatever else and then someone can convert it over to the correct format. For that, you can find how to get in contact [on the main help page](https://drawpile.net/help/){:target="_blank"}.
+You can contribute to this help page by writing documentation! 
+If you know your way around, you can send pull requests [to the drawpile.github.io repository](https://github.com/drawpile/drawpile.github.io). 
+Otherwise, you can just write up an article in your favorite word processor and send it over to us! 
+
+
+
+## Development Contribution
+
+These are areas that need some software development skills. 
+We've compiled the ideas into a large backlog, and created their corresponding GitHub issue.
+
+### Development Backlog
+
+All items in the following chart **should** exist as issues on our GitHub; you can check their current status by clicking them.
+Note that this list isn't updated in real time, but is updated often enough for you to pick an area to contribute.
+
+| Tasks & Features                                                                                                                                                                                                                                     | Status   | Size | Type   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ---- | ------ |
+| Implement OpenGL canvas view                                                                                                                                                                                                                         | OCCUPIED | L    | patch  |
+| [Port for iPad (iOS/iPad OS)](https://github.com/drawpile/Drawpile/issues/1095)                                                                                                                                                                      | idea     | XL   | patch  |
+| [Make undo and redo not require a round-trip to the server](https://github.com/drawpile/Drawpile/issues/1203)                                                                                                                                        | Awaiting | L    | patch  |
+| [Remember background color per brush slot](https://github.com/drawpile/Drawpile/issues/1205)                                                                                                                                                         | Awaiting | S    | patch  |
+| [First-time user setup wizard to reduce preferences fiddling](https://github.com/drawpile/Drawpile/issues/1207)                                                                                                                                      | Awaiting | M    | patch  |
+| [Redesign chat to not be fixed at the bottom (perhaps dock, overlay or additional tab for the right pane)](https://github.com/drawpile/Drawpile/issues/1208)                                                                                         | idea     | L    | patch  |
+| [Rework selections and transforms](https://github.com/drawpile/Drawpile/milestone/10), see [GitHub Milestone](https://github.com/Drawpile/Drawpile/milestone/10)                                                                                     | Awaiting | L    | UPDATE |
+| Allow hiding user cursors when they get too close to where you're drawing                                                                                                                                                                            | idea     | S    | patch  |
+| [Make arrow keys move around the timeline when it has focus](https://github.com/drawpile/Drawpile/issues/1209)                                                                                                                                       | idea     | S    | patch  |
+| [Add more fonts to the browser client so that non-Latin languages work](https://github.com/drawpile/Drawpile/issues/1175)                                                                                                                            | idea     | S    | patch  |
+| [Indicate and remember hidden list servers in the server browser](https://github.com/drawpile/Drawpile/issues/1213)                                                                                                                                  | idea     | S    | patch  |
+| [Implement cel mode for timeline tracks](https://github.com/drawpile/Drawpile/issues/1214)                                                                                                                                                           | Awaiting | M    | UPDATE |
+| [Allow operations like moving or copying across multiple timeline frames](https://github.com/drawpile/Drawpile/issues/1158)                                                                                                                          | Awaiting | M    | UPDATE |
+| [Implement proposed gap closing algorithm for the fill tool](https://github.com/drawpile/Drawpile/issues/1216)                                                                                                                                       | idea     | M    | patch  |
+| Action Log                                                                                                                                                                                                                                           | idea     | M    | patch  |
+| Remove support for the old login process                                                                                                                                                                                                             | idea     | S    | SeRVeR |
+| [Bundle ffmpeg on Windows](https://github.com/drawpile/Drawpile/issues/1129)                                                                                                                                                                         | idea     | M    | patch  |
+| Filtering Communities                                                                                                                                                                                                                                | idea     | S    | patch  |
+| [Pan and Rotation Tool (as part of the current Zoom tool)](https://github.com/drawpile/Drawpile/issues/1217)                                                                                                                                         | idea     | M    | patch  |
+| Drop-downs that involve 3 or less items should become buttons                                                                                                                                                                                        | OCCUPIED | S    | patch  |
+|                                                                                                                                                                                                                                                      |          |      |        |
+| Presets for key bindings, with import and export (+ start screen)                                                                                                                                                                                    | idea     | M    | patch  |
+| Allow exporting and importing settings between desktop, mobile and browser                                                                                                                                                                           | idea     | M    | patch  |
+| [Make the browser version save all configurations properly](https://github.com/drawpile/Drawpile/issues/1175)                                                                                                                                        | idea     | M    | patch  |
+| Increase layer count limit                                                                                                                                                                                                                           | Awaiting | M    | UPDATE |
+| [Increase brush size limit](https://github.com/drawpile/Drawpile/issues/1171)                                                                                                                                                                        | Awaiting | M    | UPDATE |
+| [Redesign permissions (setting limits & privileges)](https://github.com/drawpile/Drawpile/issues/1219)                                                                                                                                               | idea     | L    | UPDATE |
+| [Sidecar Server-side Permission Manager](https://github.com/drawpile/Drawpile/issues/1257)                                                                                                                                                           |          |      | SeRVeR |
+| Unify host dialog and session settings so that you can host with the intended settings immediately                                                                                                                                                   | idea     | M    | patch  |
+|                                                                                                                                                                                                                                                      |          |      |        |
+| Add private/public toggle to host dialog, defaulting to the former                                                                                                                                                                                   | Awaiting | S    | patch  |
+| [Tags and/or descriptions for public sessions](https://github.com/drawpile/Drawpile/issues/1225)                                                                                                                                                     | idea     | M    | patch  |
+| [Split server browser into table and detail view](https://github.com/drawpile/Drawpile/issues/1226)                                                                                                                                                  | idea     | S    | patch  |
+| [Make it clearer why someone can't join a session (e.g. wrong version.)](https://github.com/drawpile/Drawpile/issues/1223)                                                                                                                           | idea     | S    | patch  |
+| [Remove private listing roomcode feature (it's been replaced with invite links)](https://github.com/drawpile/Drawpile/issues/1224)                                                                                                                   | Awaiting | S    | patch  |
+| [Remove "block new logins" session setting, it's redundant with the password](https://github.com/drawpile/Drawpile/issues/1222)                                                                                                                      | Awaiting | M    | patch  |
+| Make invite links not include stale passwords if it was changed                                                                                                                                                                                      | idea     | S    | patch  |
+| [Allow favoriting brush presets](https://github.com/drawpile/Drawpile/issues/1227)                                                                                                                                                                   | idea     | S    | patch  |
+| [Dynamically switch between desktop and small-screen mode](https://github.com/drawpile/Drawpile/issues/1228)                                                                                                                                         | idea     | S    | patch  |
+| Allow resetting settings to their defaults in a sensible way                                                                                                                                                                                         | idea     | S    | patch  |
+| Allow customizing tool and status bar widgets                                                                                                                                                                                                        | idea     | M    | patch  |
+| [Add clone and heal brush (plus permissions.)](https://github.com/drawpile/Drawpile/issues/1232)                                                                                                                                                     | idea     | L    | UPDATE |
+| [Implement floating reference image annotations (plus compression & permissions)](https://github.com/drawpile/Drawpile/issues/1147)                                                                                                                  | idea     | L    | UPDATE |
+| [Attempt utilizing more modern compression (brotli, zstd, webp.)](https://github.com/drawpile/Drawpile/issues/1233)                                                                                                                                  | idea     | M    | UPDATE |
+| [Decompress compressed commands once upon receipt, rather than each time they're executed](https://github.com/drawpile/Drawpile/issues/1234)                                                                                                         | idea     | S    | patch  |
+| [Allow saving and loading webp Ideally also saving animated webp for animations](https://github.com/drawpile/Drawpile/issues/1235)                                                                                                                   | idea     | M    | patch  |
+| [Allow exporting animation frames on Android and browser (into a ZIP)](https://github.com/drawpile/Drawpile/issues/1236)                                                                                                                             | idea     | S    | patch  |
+| Upgrade browser client to Qt 6.7 and check if [this bug](https://bugreports.qt.io/browse/QTBUG-121416) still appears                                                                                                                                 | Awaiting | S    | patch  |
+| [Darken depressed buttons](https://github.com/drawpile/Drawpile/issues/1237)                                                                                                                                                                         | idea     | S    | patch  |
+| [Make autosave actually automatic](https://github.com/drawpile/Drawpile/issues/1065)                                                                                                                                                                 | idea     | M    | patch  |
+| [Add a graphical interface for the Drawpile-timelapse CLI](https://github.com/drawpile/Drawpile/issues/1242)                                                                                                                                         | idea     | M    | patch  |
+| [Allow exporting animations as videos, probably via ffmpeg](https://github.com/drawpile/Drawpile/issues/1243)                                                                                                                                        | idea     | M    | patch  |
+| [Allow zooming the timeline](https://github.com/drawpile/Drawpile/issues/1244)                                                                                                                                                                       | idea     | S    | patch  |
+| [Make kinetic scrolling work in the timeline](https://github.com/drawpile/Drawpile/issues/1245)                                                                                                                                                      | idea     | S    | patch  |
+| [Add a brush size palette widget](https://github.com/drawpile/Drawpile/issues/1246)                                                                                                                                                                  | idea     | M    | patch  |
+| Make session resets less disruptive by designating a single user to perform the reset                                                                                                                                                                | idea     | L    | patch  |
+| Allow the server to delegate resetting the session to an external tool instead of a client                                                                                                                                                           | idea     | L    | patch  |
+| [Make the systemd service not install socket activation automatically](https://github.com/drawpile/Drawpile/issues/1249)                                                                                                                             | idea     | S    | patch  |
+| [Integrate with systemd watchdog](https://github.com/drawpile/Drawpile/issues/1250)                                                                                                                                                                  | idea     | S    | patch  |
+| [Add optional buttons for mirror, rotate, etc, to navigator](https://github.com/drawpile/Drawpile/issues/1251)                                                                                                                                       | idea     | M    | patch  |
+| [Truncate files when writing them on Android](https://github.com/drawpile/Drawpile/issues/1252)                                                                                                                                                      | idea     | S    | patch  |
+| [Add rotation and panning to zoom tool](https://github.com/drawpile/Drawpile/issues/1217)                                                                                                                                                            | idea     | M    | patch  |
+| [Implement animation tweening](https://github.com/drawpile/Drawpile/issues/1254)                                                                                                                                                                     | idea     | S    | patch  |
+| [Replace global timeline with animation groups](https://github.com/drawpile/Drawpile/issues/1253)                                                                                                                                                    | Awaiting | L    | UPDATE |
+| [Allow hiding the brush preview](https://github.com/drawpile/Drawpile/issues/1255)                                                                                                                                                                   | idea     | S    | patch  |
+| [Implement optional server-side rate limiting](https://github.com/drawpile/Drawpile/issues/1256)                                                                                                                                                     | idea     | M    | patch  |
+| [Allow opening multiple documents/sessions in tabs](https://github.com/drawpile/Drawpile/issues/1006)                                                                                                                                                | idea     | L    | patch  |
+| [Integrating multiple account systems , e.g. Drawpile.net, Drawpile.cn, or even third party ones (like Steam)](https://github.com/drawpile/Drawpile/issues/1258)                                                                                     | Awaiting | L    | patch  |
+| [Add a scribble area to the brush settings dialog, to allow for testing brushes](https://github.com/drawpile/Drawpile/issues/1259)                                                                                                                   | Awaiting | M    | patch  |
+| [Add scratchpad docker, to allow for an off-canvas area to mix colors and such ](https://github.com/drawpile/Drawpile/issues/1260)                                                                                                                   | idea     | M    | patch  |
+| Split the server into a frontend that users initially connect to and a backend providing the actual session hosting, to allow for load balancing, graceful restarts and running multiple Drawpile servers on the same host using different hostnames | idea     | L    | SeRVeR |
+| Get rid of the TCP protocol and run everything via WebSockets, since that allows making use of HTTP tooling around proxying, tunneling and whatnot                                                                                                   | idea     | M    | SeRVeR |
+| [Implement gesture handling on Windows](https://github.com/drawpile/Drawpile/issues/1261)                                                                                                                                                            | idea     | M    | patch  |
+| [Add touch shortucts, like double-tap to undo](https://github.com/drawpile/Drawpile/issues/1174)                                                                                                                                                     | idea     | M    | patch  |
+| [Allow importing animation frames](https://github.com/drawpile/Drawpile/issues/1262)                                                                                                                                                                 | idea     | M    | patch  |
+| [Bundle Microsoft Visual C++ Redistributables in installer](https://github.com/drawpile/Drawpile/issues/1263)                                                                                                                                        | idea     | S    | patch  |
+| [Dedicated Server as a Windows Service](https://github.com/drawpile/Drawpile/issues/463)                                                                                                                                                             | idea     | S    | patch  |
+| [Build a Drawpile version](https://github.com/drawpile/Drawpile/issues/1264) of [this Chrome Wintab Plugin](https://github.com/Agamnentzar/chrome-stylus-pressure) and integrate it into Qt                                                          | idea     | M    | patch  |
+| Host Keys for List Server (support for cluster-type hosts)                                                                                                                                                                                           | idea     | S    | patch  |
+| Implement cel/frame linking for animation workflow                                                                                                                                                                                                   | idea     | L    | UPDATE |
+| Allow color marking of frames or cels                                                                                                                                                                                                                | idea     | M    | UPDATE |
+| [Every few dozen strokes, create a very small thumbnail as preview for the layer](https://github.com/drawpile/Drawpile/issues/1265)                                                                                                                  | idea     |      |        |
+| [Upon pasting media create and hold a temporary layer ](https://github.com/drawpile/Drawpile/issues/1266)                                                                                                                                            | Awaiting | M    | UPDATE |
+| [Implement feather edges feature to selection](https://github.com/drawpile/Drawpile/issues/1267)                                                                                                                                                     | idea     | M    | UPDATE |
+| [Allow resolution presets in the New dialog](https://github.com/drawpile/Drawpile/issues/1269)                                                                                                                                                       | idea     | S    | patch  |
+| Improve UI theme                                                                                                                                                                                                                                     | idea     | S    | patch  |
+| [Make shift-scroll-driven brush size adjustment dynamic based on scroll speed](https://github.com/drawpile/Drawpile/issues/1270)                                                                                                                     | idea     | S    | patch  |
+| [Allow creating sessions from the web admin panel](https://github.com/drawpile/Drawpile/issues/1240)                                                                                                                                                 | idea     | M    | patch  |
 
-There's currently no video tutorials or anything of that sort, but we'd gladly include those too. Translations of these pages into other languages are also gladly taken.
+If you'd like to advocate or provide concept, explanation or illustration involving the changes, feel free to [contact us](https://drawpile.net/help/) or write directly in the corresponding GitHub issue.
 
-## Code Stuff
 
-These are things that need some software development skills. They're not necessarily easy pickings, but are things that are either reasonably isolated to not run into conflicts or require owning specific hardware or running certain operating systems. If you notice anything stale here, give a poke so that we update it. You can find out how to get in contact [on the main help page](https://drawpile.net/help/){:target="_blank"}.
 
-Also, considerer joining [Discord](https://drawpile.net/discord/){:target="_blank"} or [libera.chat](https://drawpile.net/irc/){:target="_blank"} so you can ask if you hit a snag!
 
-"Repository" says which part of Drawpile this is about, e.g. the application itself, the listserver or the website. "Tech" lists what kinds of technologies and languages are involved, vaguely in order of importance. There's also GitHub issue links where available.
 
-### Transformation Handles
 
-When making a selection and then zooming out very far, the arrows on the corners start getting cut off, I guess because the selection item's bounding box is not calculated correctly when zoom gets involved.
-
-Also, those handles sometimes annoyingly difficult to hit. The area in which they can be clicked on should be made larger and there should be some visual indication when hovering over one of them (e.g. by drawing them with 50% opacity by default and when you hover over them you draw with 100% opacity and/or changing the cursor to some kind of grabby hand) to make it clear that you're actually going to hit them.
-
-This is a good starter issue, since it's small and self-contained to a single component.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: Qt, C++.
-
-[GitHub Issue](https://github.com/drawpile/Drawpile/issues/1116){:target="_blank"}
-
-### Pan and Rotation Tool
-
-Currently, Drawpile only has a zoom tool (shortcut is Z.) It would be nice to extend this tool to also allow panning and rotation of the canvas. This would allow easier one-handed operation of Drawpile, since not everyone has two of those.
-
-The tool's options panel can be extended with radio buttons to this effect, similar how it works for selections where you have the three Scale/Shear/Distort options. It could also be added as separate tools instead, but I'd rather avoid that, since that would add two additional buttons in the toolbar, which already tends to have trouble with being too wide on devices with small screens.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: Qt, C++.
-
-This doesn't currently have a GitHub issue.
-
-### Action Log
-
-This would be a feature for the Drawpile client where "important" actions get logged so that they can be inspected and maybe also undone. For example, layer deletions, timeline changes, session resets etc. The kinds of things that tend to happen accidentally and then end up in a scramble of trying to figure out what happened.
-
-It involves adding another tab to the dialog that shows up when you go into Session → Event Log, where those kinds of events get logged, along with the user who did it. The events would need to be bubbled up from the paint engine when they're executed.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: Qt, C++, C.
-
-[GitHub Issue](https://github.com/drawpile/Drawpile/issues/1135){:target="_blank"}
-
-### Gestures on Windows
-
-On Windows, some laptop touchpads emit gesture events. [Qt doesn't handle them](https://code.qt.io/cgit/qt/qtbase.git/tree/src/plugins/platforms/windows/qwindowsmousehandler.cpp?h=5.15#n701){:target="_blank"}, which leads to Drawpile getting [fallback behavior](https://learn.microsoft.com/en-us/windows/win32/wintouch/windows-touch-gestures-overview#legacy-support){:target="_blank"}, which doesn't feel particularly nice because it only supports zooming and scrolling separately and doesn't handle rotations.
-
-Fixing this means ideally owning a device with such a touchpad and then extending the native Windows event filter in `wineventfilter.cpp` to catch these events and sends them to the canvas. Other widgets are fine with the fallback behavior, since they don't need to do any simultaneous moving, zooming and rotating.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: Qt, Win32, C++.
-
-This doesn't currently have a GitHub issue.
-
-### Touch Shortcuts
-
-It would be nice to define certain touch operations as shortcuts. For example, tapping with two fingers to undo, tapping with three to redo. Ideally this would be reassignable in the shortcuts panel, but that's not super necessary to be useful.
-
-This involves altering canvasview.cpp, which does its own touch handling. It would basically have to detect a brief touch with 2 or 3 fingers, which it would then interpret as an undo or redo. Ideally without moving the canvas around in that case, which could be accomplished with some brief guessing, similar to how touch drawing is currently detected in the same file. It would be enough to implement this for touchscreen mode only (QTouchEvent), not in gesture mode (QGestureEvent), since this is most relevant for devices that only have a touchscreen.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: Qt, C++.
-
-[GitHub Issue](https://github.com/drawpile/Drawpile/issues/1174){:target="_blank"}
-
-### Importing Animation Frames
-
-Currently there's no way to import a bunch of images into Drawpile as animation frames, there's only an import for Drawpile 2.1 animations in ORA files. So currently, users have to work around this by e.g. importing the frames into GIMP as layers, saving as an ORA file and then importing that, which is pretty roundabout. It would be nicer if Drawpile just had a way to import frames directly, similar to e.g. Krita.
-
-At the time of writing, the frame import on the main branch is still in Rust. This is replaced by C again on the feature/qtwasm branch, since linking it in WebAssembly causes trouble.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: C, C++, Qt.
-
-This doesn't currently have a GitHub issue.
-
-### Bundle ffmpeg on Windows
-
-It'd be nice if we bundled ffmpeg on Windows, since there's no package manager and no standard binary paths there. This involves fiddling with GitHub actions.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: GitHub Actions, CMake.
-
-[GitHub Issue](https://github.com/drawpile/Drawpile/issues/1129){:target="_blank"}
-
-### Bundle Microsoft Visual C++ Redistributable in Windows Installer
-
-The Windows installer doesn't bundle the Microsoft C++ libraries, it just tells you to go install them if you don't have them. This is pretty user-unfriendly, it should either include them if possible or at least give the user a link to click so that they don't have to type in the text manually. Theoretically, any system of Windows 10 and above should have these libraries, but it seems like reality is a bit different sometimes.
-
-Requires messing around with the WiX toolkit to somehow bundle it into the MSI.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: WiX Toolkit, MSI, Windows.
-
-This doesn't currently have a GitHub issue.
-
-### Dedicated Server as a Windows Service
-
-The Drawpile server has proper integrations to run it as a systemd service, but no such thing exists for Windows. If you know how Windows services work, this is probably not to difficult to implement (speaking as someone who doesn't know Windows and only took a cursory look, anyway.)
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: Windows, C++, Qt.
-
-[GitHub Issue](https://github.com/drawpile/Drawpile/issues/463){:target="_blank"}
-
-### iOS Port
-
-Drawpile is written in Qt, which ostensibly supports iOS too. However, none of the developers are Apple users, so none of them have the required devices or access to the Apple developer program. If you have those and aren't afraid of diving deep into build system stuff, this would be a big help.
-
-Repository: [Drawpile](https://github.com/drawpile/Drawpile){:target="_blank"}
-
-Tech: Qt, iOS.
-
-[GitHub Issue](https://github.com/drawpile/Drawpile/issues/1095){:target="_blank"}
-
-### Filtering Communities
-
-The different [community servers](https://drawpile.net/communities/){:target="_blank"} have different setups. Some require accounts for hosting, some allow only SFW stuff etc.
-
-It would be nice if that site let you filter these communities accordingly, so that you don't have to click each one to figure that out.
-
-Repository: [website](https://github.com/drawpile/website){:target="_blank"}
-
-Tech: Django, Python.
-
-This doesn't currently have a GitHub issue.
-
-### Host Keys for List Server
-
-The Drawpile list server lets people list sessions hosted elsewhere. For example, if you look at [pub.drawpile.net](https://pub.drawpile.net/){:target="_blank"}, you can see sessions listed from various other places. This is used by e.g. the server browser in Drawpile.
-
-This list server will check if the incoming IP address matches the domain name, to avoid listing spam. If they don't match, the user gets "hostname does not match client IP". This is fine for bare metal servers, but if you're e.g. in a Kubernetes cluster, this doesn't work.
-
-The solution for this is to add the ability to hand out some kind of key to skip this check. Basically involves adding an admin endpoint that allows assigning a key to a hostname and if that key is passed in the request, the check gets skipped. The keys should be revokable. Having this in the admin web UI would also be nice.
-
-A starting implementation is [in this branch](https://github.com/drawpile/listserver/tree/feature/hostkeys), which is still missing an admin interface and the web UI.
-
-Repository: [listserver](https://github.com/drawpile/listserver){:target="_blank"}, [drawpile-admin-webui](https://github.com/drawpile/drawpile-admin-webui){:target="_blank"}
-
-Tech: Go, SQLite (for the listserver); TypeScript, Lit (for the Web UI)
-
-[GitHub Issue](https://github.com/drawpile/listserver/issues/6){:target="_blank"}
-
-### Wintab in the Browser
-
-Browsers only support pressure through Windows Ink on Windows. There's [this Chrome plugin](https://github.com/Agamnentzar/chrome-stylus-pressure) that allows using Wintab.
-
-The plugin has the allowed websites hard-coded, so a custom Drawpile version of it needs to be built. Ideally, it the plugin should be patched so that any website to use the plugin so that we don't perpetuate this same problem.
-
-Then the plugin needs to be integrated into the browser version of Drawpile by patching it into Qt.
-
-We only care about the Windows part of that plugin. The Linux part is irrelevant nowadays.
-
-Repository: <https://github.com/Agamnentzar/chrome-stylus-pressure> (needs a fork)
-
-Tech: JavaScript, C++, Windows.
-
-This doesn't currently have a GitHub issue.
