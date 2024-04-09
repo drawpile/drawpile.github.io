@@ -21,6 +21,52 @@ Read [the architecture page](architecture) to become familiar with the different
 * Table of contents
 {:toc}
 
+
+## Non-Development Contribution
+
+These wouldn't require you to be a software developer. Some may still be technical, but a lot less so.
+
+### Helping Other Users
+
+Users come to ask questions about Drawpile on our [Discord](https://drawpile.net/discord/) and [libera.chat](https://drawpile.net/irc/). 
+If you know your way around Drawpile and want to help others this way, you can hang around help respond to those kinds of questions.
+
+### Providing Illustrations
+
+You may have noticed that the Drawpile website is pretty thin on illustrations. It would be great to have some for decoration or to showcase features, issues or bugs!
+
+If you've drawn artworks or prepared showcases that you would like Drawpile to us, [contact us](https://drawpile.net/help/)! 
+
+The works provided should naturally come with your consent to use, and ideally be put under a [Creative Commons license](https://creativecommons.org/share-your-work/).
+They should of course be made at least for the most part in Drawpile and shouldn't contain any canon characters or intellectual property.
+
+### Reporting Problems, Suggesting Features
+
+When you find a bug or some other problem or have an idea for a good feature, bring it up! This is how Drawpile improves. 
+Don't worry about reporting duplicates, it doesn't hurt to hear things brought up again and might end up as a good reminder to get to them.
+If the matter is already brought up in for example a GitHub issue, feel free to add your thoughts or elaboration to it!
+
+### Translations
+
+Drawpile is used all across the world, by people speaking many different languages. 
+If you want to translate it into yours or fix something about an existing translation, you can do so [on Weblate](https://hosted.weblate.org/engage/drawpile/).
+You can see which languages there are already and how complete the translations are. If you don't spot your language, you can add a new one.
+
+### Community Servers
+
+Drawpile has a set of [community servers](https://drawpile.net/communities/). These are servers run by and moderated by people who want to give a space for others to draw. 
+If you have your own Drawpile server that you want to become one of these community servers, you can [submit it here](https://drawpile.net/communities/drawpile.net/ych/).
+
+If you want to help moderate existing Drawpile servers, feel free to [contact us](https://drawpile.net/help/). 
+
+### Documentation
+
+You can contribute to this help page by writing documentation! 
+If you know your way around, you can send pull requests [to the drawpile.github.io repository](https://github.com/drawpile/drawpile.github.io). 
+Otherwise, you can just write up an article in your favorite word processor and send it over to us! 
+
+
+
 ## Development Contribution
 
 These are areas that need some software development skills. 
@@ -122,50 +168,7 @@ Note that this list isn't updated in real time, but is updated often enough for 
 | [Make shift-scroll-driven brush size adjustment dynamic based on scroll speed](https://github.com/drawpile/Drawpile/issues/1270)                                                                                                                     | idea     | S    | patch  |
 | [Allow creating sessions from the web admin panel](https://github.com/drawpile/Drawpile/issues/1240)                                                                                                                                                 | idea     | M    | patch  |
 
-
-
-## Non-Development Contribution
-
-These wouldn't require you to be a software developer. Some may still still be technical, but a lot less so.
-
-### Helping Other Users
-
-Users come to ask questions about Drawpile on our [Discord](https://drawpile.net/discord/) and [libera.chat](https://drawpile.net/irc/). 
-If you know your way around Drawpile and want to help others this way, you can hang around help respond to those kinds of questions.
-
-### Providing Illustrations
-
-You may have noticed that the Drawpile website is pretty thin on illustrations. It would be great to have some for decoration or to showcase features, issues or bugs!
-
-If you've drawn artworks or prepared showcases that you would like Drawpile to us, [contact us](https://drawpile.net/help/)! 
-
-The works provided should naturally come with your consent to use, and ideally be put under a [Creative Commons license](https://creativecommons.org/share-your-work/).
-They should of course be made at least for the most part in Drawpile and shouldn't contain any canon characters or intellectual property.
-
-### Reporting Problems, Suggesting Features
-
-When you find a bug or some other problem or have an idea for a good feature, bring it up! This is how Drawpile improves. 
-Don't worry about reporting duplicates, it doesn't hurt to hear things brought up again and might end up as a good reminder to get to them.
-If the matter is already brought up in for example a GitHub issue, feel free to add your thoughts or elaboration to it!
-
-### Translations
-
-Drawpile is used all across the world, by people speaking many different languages. 
-If you want to translate it into yours or fix something about an existing translation, you can do so [on Weblate](https://hosted.weblate.org/engage/drawpile/).
-You can see which languages there are already and how complete the translations are. If you don't spot your language, you can add a new one.
-
-### Community Servers
-
-Drawpile has a set of [community servers](https://drawpile.net/communities/). These are servers run by and moderated by people who want to give a space for others to draw. 
-If you have your own Drawpile server that you want to become one of these community servers, you can [submit it here](https://drawpile.net/communities/drawpile.net/ych/).
-
-If you want to help moderate existing Drawpile servers, feel free to [contact us](https://drawpile.net/help/). 
-
-### Documentation
-
-You can contribute to this help page by writing documentation! 
-If you know your way around, you can send pull requests [to the drawpile.github.io repository](https://github.com/drawpile/drawpile.github.io). 
-Otherwise, you can just write up an article in your favorite word processor and send it over to us! 
+If you'd like to advocate or provide concept, explanation or illustration involving the changes, feel free to [contact us](https://drawpile.net/help/) or write directly in the corresponding GitHub issue.
 
 
 
