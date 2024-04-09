@@ -9,13 +9,10 @@ tag: help development
 ### How to contribute to Drawpile
 
 If you'd like to contribute to Drawpile, then you've come to the right place.
+
 Here we will go over a variety of ways you can help the project with development, and without!
 
-If you'd like to take on a task or work on an area, we strongly recommend getting in contact with us and the other members in our community, to avoid conflicts or potentially working on something that is already being worked on.
-This is especially important when it comes to the network protocol or similar pillar components because of the potential for merge conflicts, which can be avoided if we know what you're working on.
-You can find out how to get in contact [on the main help page](https://drawpile.net/help/).
-
-Read [the architecture page](architecture) to become familiar with the different components, and check out our [coding guidelines](https://docs.drawpile.net/help/development/codingguidelines) for general but very useful guidelines.
+While Drawpile could use help with its developement, you don't need to be a developer or possess coding skills to provide very valuable contributions.
 
 
 * Table of contents
@@ -24,7 +21,7 @@ Read [the architecture page](architecture) to become familiar with the different
 
 ## Non-Development Contribution
 
-These wouldn't require you to be a software developer. Some may still be technical, but a lot less so.
+Here are quite a few ways you could contribute that don't require you to be a software developer. You can contribute in many other ways not mentioned here.
 
 ### Helping Other Users
 
@@ -65,11 +62,26 @@ You can contribute to this help page by writing documentation!
 If you know your way around, you can send pull requests [to the drawpile.github.io repository](https://github.com/drawpile/drawpile.github.io). 
 Otherwise, you can just write up an article in your favorite word processor and send it over to us! 
 
+### Reproducing Issues
+
+You could help developers pinpoint the cause of problems by recreating the problems that are reported on our [GitHub issues page](https://github.com/drawpile/Drawpile/issues) and [Discord server](https://discord.gg/M3yyMpC) and greatly speed up the process, especially by providing log files if applicable.
+
+### Testing New Features
+
+Additional testing for new or experimental features is always valuable, especially since your devices and cirumstances is likely unique. Description of your experience will help developers improve the features for everyone.
 
 
 ## Development Contribution
 
 These are areas that need some software development skills. 
+
+If you'd like to take on a task or work on an area, we strongly recommend getting in contact with us and the other members in our community, to avoid conflicts or potentially working on something that is already being worked on.
+This is especially important when it comes to the network protocol or similar pillar components because of the potential for merge conflicts, which can be avoided if we know what you're working on.
+You can find out how to get in contact [on the main help page](https://drawpile.net/help/).
+
+Read [the architecture page](architecture) to become familiar with the different components, and check out our [coding guidelines](https://docs.drawpile.net/help/development/codingguidelines) for general but very useful guidelines.
+
+
 We've compiled the ideas into a large backlog, and created their corresponding GitHub issue.
 
 ### Development Backlog
