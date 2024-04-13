@@ -1,6 +1,6 @@
 ---
 layout: drawpile_post
-title: "Dev Update: Weeks 14 of 2024"
+title: "Dev Update: Week 14 of 2024"
 date: 2024-04-05 00:00:00 +0200
 category: "devblog"
 tag: "@askmeaboutloom"
