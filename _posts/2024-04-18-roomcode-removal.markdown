@@ -12,7 +12,7 @@ The "roomcode" feature will be removed in Drawpile 2.2.2. If you don't know what
 
 Back in the old times, Drawpile used to have a single, central listing server. When you used Drawpile's session browser, it would always pull its listings from there and if you wanted your session to show up, you had to list it there.
 
-There were two options of listing your session. The "normal" way was to list it publicly, which made it show up in the session browser. But there was also the way to do a "private listing", which would only generate a so-called roomcode, a six character code. You could give that to yourf friends, who would type it into Drawpile, which would ask the listing server if it knew that roomcode. If it did, it would resolve it to the session's address.
+There were two options of listing your session. The "normal" way was to list it publicly, which made it show up in the session browser. But there was also the way to do a "private listing", which would only generate a so-called roomcode, a six character code. You could give that to your friends, who would type it into Drawpile, which would ask the listing server if it knew that roomcode. If it did, it would resolve it to the session's address.
 
 So basically, roomcodes were a link shortener for Drawpile sessions.
 
@@ -24,7 +24,7 @@ This poses a problem for roomcodes, since they really relied on there being a ce
 
 What happens when you type a roomcode into Drawpile? Uh, it just asks every listing server you added hoping one of them knows the code. This can take a while, depending on how many list servers you added.
 
-What if you don't have the list server added? Well, then the roomcode is useless to you. So you if you want to invite a friend that never used Drawpile before, you first have to explain to them what hoops to jump through go through to actually make the code work.
+What if you don't have the list server added? Well, then the roomcode is useless to you. So you if you want to invite a friend that never used Drawpile before, you first have to explain to them what hoops to jump through to actually make the code work.
 
 How do listing servers coordinate to avoid duplicate roomcodes? Um, they don't. If you have particularly bad luck, you might type in a roomcode and get sent to the wrong session.
 
@@ -32,7 +32,7 @@ Altogether, that makes roomcodes very hard to actually use sensibly. On top of a
 
 ## Replacement
 
-With Drawpile 2.2.0, invite links were added. They're superior to room codes in pretty much every way: you don't have to list them anywhere, people joining don't have to add a list server first, they provide a website that explains how to get Drawpile or join via browser and they will also include the session password so that you don't have to type that in manually.
+With Drawpile 2.2.0, invite links were added. They're superior to room codes in pretty much every way: you don't have to list them anywhere, people joining don't have to add a list server first, they provide a web page that explains how to get Drawpile or join via browser and they will also include the session password so that you don't have to type that in manually.
 
 And if the link is too long for your taste, you can use a regular link shortener, there's plenty of them out there.
 
