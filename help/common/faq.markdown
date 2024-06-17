@@ -145,7 +145,7 @@ If you know someone that does send them our way! The [main help page](https://dr
 
 ### Is there a browser version of Drawpile?
 
-Yes, but it's in development and not yet generally available.
+Yes, see [the Browser section on the Downloads page](https://drawpile.net/download/#Browser).
 
 ### What programming language is Drawpile written in?
 
