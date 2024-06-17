@@ -58,6 +58,8 @@ If that still doesn't work, come ask for help on Discord, the web chat or GitHub
 
 On Linux, usually tablets just work. If not, you may have to install a package such as libwacom on Wayland or xf86-input-wacom on X11. Refer to your distribution's documentation for how to do this.
 
+If you're having problems in Wayland with your cursor disappearing or turning into a crosshair when you use your tablet, switch to an X11 session instead. You should be able to do that in your login screen.
+
 If you can't get it working, you can ask for help on Discord, in the web chat or GitHub. Take a look at [the help page](https://drawpile.net/help/) for links to those.
 
 ## macOS
