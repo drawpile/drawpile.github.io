@@ -25,16 +25,10 @@ For further troubleshooting, refer to [the tablet setup and troubleshooting page
 ![Tablet Drivers menu]({{ "/assets/img/help/tabletdriver.webp" | relative_url }})
 
 ### Why does Drawpile not switch back after I use my tablet pen's eraser?
-
-This usually happens on Windows because of a driver mismatch. In Drawpile, pick a different option under Edit → Tablet Driver. Usually "KisTablet Wintab" is the correct one in this case, but try them all until you find one that works.
-
-For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
-
-![Tablet Drivers menu]({{ "/assets/img/help/tabletdriver.webp" | relative_url }})
-
 ### Why am I getting thick dots on my lines?
+### Why does the brush position detach frm my cursor?
 
-Similar to the above, this is usually a driver mismatch in Windows. In Drawpile, pick a different option under Edit → Tablet Driver. Usually "KisTablet Windows Ink" is the correct one in this case, but try them all until you find one that works.
+All of the above usually happen on Windows because of a driver mismatch. In Drawpile, pick a different option under Edit → Tablet Driver. Usually "KisTablet Wintab" is the correct one in this case, but try them all until you find one that works.
 
 For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
 
@@ -57,6 +51,10 @@ Probably because it's not set to do so. Go into Edit → Preferences, switch to 
 For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
 
 ![Touch input preferences]({{ "/assets/img/help/inputtouch.webp" | relative_url }})
+
+### Why does my cursor disappear/turn into a crosshair when I use my tablet?
+
+This happens on Linux under some Wayland environments [because of this bug](https://bugreports.qt.io/browse/QTBUG-123776){:target="_blank"}. Until they have fixed it and the fix is integrated into Drawpile, switch to an X11 session instead, you should be able to do so in your login screen.
 
 
 ## Online
