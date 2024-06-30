@@ -26,7 +26,7 @@ For further troubleshooting, refer to [the tablet setup and troubleshooting page
 
 ### Why does Drawpile not switch back after I use my tablet pen's eraser?
 ### Why am I getting thick dots on my lines?
-### Why does the brush position detach frm my cursor?
+### Why does the brush position detach from my cursor?
 
 All of the above usually happen on Windows because of a driver mismatch. In Drawpile, pick a different option under Edit → Tablet Driver. Usually "KisTablet Wintab" is the correct one in this case, but try them all until you find one that works.
 
