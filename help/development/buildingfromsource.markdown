@@ -17,6 +17,7 @@ Pick the operating system you want to build Drawpile for:
 * [macOS](#macos)
 * [Windows](#windows)
 * [Android](#android)
+* [WebAssembly](#webassembly)
 * [Other Operating Systems](#other-operating-systems)
 
 ## Linux
@@ -87,6 +88,42 @@ Sometimes cmake fails to generate the PDB paths (debug info stuff.) If that happ
 Unfortunately, building on Android is such a mess that there's currently no straight-forward instructions for it. Just about every update to the toolchain seems to break things in new and exciting ways.
 
 If you want to try anyway, your best bet is to look at [the GitHub Actions workflow](https://github.com/drawpile/Drawpile/blob/main/.github/workflows/main.yml){:target="_blank"} and follow things from there. Also, come join the Discord or IRC channel listed [on the help page](https://drawpile.net/help/) so that you can get some support and a place to rant on. If you succeed, we'll document the process here!
+
+## WebAssembly
+
+Building on WebAssembly has only been tested on Linux. Your mileage may vary on other operating systems.
+
+```sh
+# Get the Emscripten SDK, version 3.1.50
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+./emsdk install 3.1.50
+./emsdk activate latest
+cd ..
+
+# Grab Drawpile's source code
+git clone https://github.com/drawpile/Drawpile.git
+cd Drawpile
+
+# Activate Emscripten in your current shell
+. ../emsdk/emsdk_env.sh
+
+# Set up the dependencies (will take several hours)
+pkg/emscripten/setup.bash debug
+
+# Configure Drawpile
+pkg/emscripten/configure.bash debug
+
+# Build it (linking will take several minutes)
+cmake --build buildemdebug
+
+# Create a servable directory
+cmake --install buildemdebug
+```
+
+You will end up with the application ready in a directory called `installemdebug`.
+
+You can use `qtwasmserver` to serve it from there, see [Qt's documentation on that](https://doc.qt.io/qt-6/wasm.html#qtwasmserver). Running it with something like Python's http.server will *not* work because that doesn't set some required headers.
 
 ## Other Operating Systems
 

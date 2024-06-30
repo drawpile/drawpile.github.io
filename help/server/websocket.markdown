@@ -91,11 +91,13 @@ And you can of course get in touch if you need help, refer to [the main help pag
 
 Hosting your own version of the web browser client is possible, but **strongly discouraged**.
 
-Drawpile already provides a web browser client at web.drawpile.net. The browser client is just a bunch of static files, there's no server-side logic to them, so hosting a copy of them is pretty pointless and you have to keep them up to date. It also tortures users because they have to configure the client separately for every site it's hosted on. Additionally, Drawpile's invite links will always use web.drawpile.net and authentication through drawpile.net accounts only works there, not from other domains.
+Drawpile already provides a web browser client at <https://web.drawpile.net>. It works the same as the desktop version of Drawpile and is able to connect to any properly-configured server. It's just a bunch of static files, there's no server-side logic to it. Connections you make to other servers are direct WebSocket connections, drawpile.net isn't involved.
 
-However, you may want to host your own client as a backup in case web.drawpile.net goes down, because you are in a region where that site is not accessible or because you want to make customizations to it. But make sure you keep it updated, it would be very annoying to have users complaining about stuff that has been fixed forever ago. Also, if you make customizations, you must also release the source code to those changes in accordance with the GPL!
+That means hosting your own version just gives you a copy of the same client, basically like hosting your own downloads of the desktop version of Drawpile, which is pretty pointless and causes us headaches if you don't keep it up to date. It also is torturous to users because all of their settings are per-domain, so they have to configure everything multiple times.
 
-The browser client is still in development. No pre-built versions of it are available. To build it yourself, you need Linux and Emscripten set up on it. Check out the `feature/qtwasm` branch, run `pkg/emscripten/setup.bash release` (this takes a long time), then run `pkg/emscripten/configure.bash release`, then `cmake --build builemdrelease` (takes pretty long, especially the linking at the end is very slow) and finally `cmake --install buildemrelease`. The files will be in the `installemrelease` directory.
+However, you may want to host your own client as a backup in case web.drawpile.net goes down, because you are in a region or organization where that site is not accessible or because you want to make customizations to it that aren't accepted into the main application. In that case, hosting your own client makes sense, but please make sure we're not left holding the pieces. Also, if you make customizations, you must also release the source code to those changes in accordance with the GPL!
+
+To build the client, look [at the Building from Source page](/help/development/buildingfromsource#webassembly). That page assumes you're building for development purposes, so replace any instances of `debug` with `release`.
 
 To host the client using nginx, you need to set up the wasm type correctly. In nginx.conf in the http section, add:
 
