@@ -87,17 +87,10 @@ See the [readme file](https://github.com/drawpile/dpserver/blob/master/README.md
 
 Once you're satisfied with the configuration, you can try starting the server up:
 
-<pre class="console">docker-compose up</pre>
-
-The server will shut down when you hit Ctrl+C. To start the server and leave it running
-in the background, use:
-
-<pre class="console">docker-compose up -d</pre>
+<pre class="console">./docker-compose-wrapper up -d</pre>
 
 To update the server components, run `git pull` to update the repository. If you changed any of the files inside, you may have to resolve resulting conflicts. Then run `docker-compose pull`, followed by `docker-compose up -d` to restart the changed services.
 
 You can update the web admin to the latest version by running the `./update-webadmin.sh` script.
-
-Users of the Ubuntu distribution will have to run `docker compose up` instead of `docker-compose up`.
 
 Before connecting to the server, if your VPS provider has an additional local firewall (IONOS does!), you should make sure the ports `27750`, `443`, and `80` are allowed.
