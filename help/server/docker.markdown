@@ -18,7 +18,8 @@ The following knowledge is assumed:
 
 ## Step 1. Get a (virtual) server
 
-First, you will need an actual server to run the server software on. The Drawpile server is not very demanding, so the tiniest server from [Hetzner](https://www.hetzner.com/cloud){:target="_blank"} or [Digital Ocean](https://www.digitalocean.com/products/droplets){:target="_blank"} or any other cloud VPS provider will do just fine. You can also use a physical machine at home (even a Raspberry Pi!) but in this case you will need to ensure your Internet connection is up to the task.
+First, you will need an actual server to run the server software on. The Drawpile server is not very demanding, so the cheapest server from [Hetzner](https://www.hetzner.com/cloud), [Digital Ocean](https://www.digitalocean.com/products/droplets), [IONOS](https://www.ionos.com/servers/vps), [OVH](https://www.ovhcloud.com/en/vps/), or any other cloud VPS provider will do just fine. 
+<br>You can also use a physical machine at home (even a [Raspberry Pi](https://github.com/Wade821/PiDrawpile)!) but you will need to ensure your Internet connection is up to the task.
 
 When creating the server, you must choose which Linux distribution to use. In this tutorial, I will use Debian.
 
@@ -96,3 +97,7 @@ in the background, use:
 To update the server components, run `git pull` to update the repository. If you changed any of the files inside, you may have to resolve resulting conflicts. Then run `docker-compose pull`, followed by `docker-compose up -d` to restart the changed services.
 
 You can update the web admin to the latest version by running the `./update-webadmin.sh` script.
+
+Users of the Ubuntu distribution will have to run `docker compose up` instead of `docker-compose up`.
+
+Before connecting to the server, if your VPS provider has an additional local firewall (IONOS does!), you should make sure the ports `27750`, `443`, and `80` are allowed.
