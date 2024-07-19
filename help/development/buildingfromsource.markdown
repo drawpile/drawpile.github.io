@@ -93,6 +93,8 @@ If you want to try anyway, your best bet is to look at [the GitHub Actions workf
 
 Building on WebAssembly has only been tested on Linux. Your mileage may vary on other operating systems.
 
+You will need to install the prerequisites to build Qt on your host system. On Debian-based systems, this also includes `ninja-build`, `libfontconfig1-dev` and `libssl-dev`.
+
 ```sh
 # Get the Emscripten SDK, version 3.1.50
 git clone https://github.com/emscripten-core/emsdk.git
