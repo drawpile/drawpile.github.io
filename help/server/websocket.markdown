@@ -36,7 +36,7 @@ Add [the --websocket-port option](serverconfig#websocket-listen-port), along wit
 
 If you're using systemd sockets, pass the WebSocket port as the third socket (the first one is for TCP, the second one is for the HTTP web admin API.)
 
-If you want to run your reverse proxy on the same machine as your drawpile-srv and don't have a firewall, you can also pass `--websocket-listen 127.0.0.1` to [restrict connections to ones coming from localhost](serverconfig#websocket-listen-address).
+If you want to run your reverse proxy on the same machine as your drawpile-srv and don't have a firewall, you can also pass `--websocket-listen 127.0.0.1` to [restrict connections to ones coming from localhost](serverconfig#websocket-listen-address). Note that if you're using Docker, your reverse proxy is probably *not* inside the container, so don't add this option there!
 
 Restart your drawpile-srv afterwards.
 
