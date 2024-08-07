@@ -1,17 +1,17 @@
 ---
 layout: drawpile_help
-title: "Enabling Crash Reports"
+title: "Enabling Crash Dumps"
 description: "How to enable debug dumps if Drawpile crashes."
 date: 2024-07-28 00:00:00 +0200
 category: "help"
 tag: help tech
 ---
 
-Crash reports can help figure out why Drawpile crashed. At the time of writing, we don't have any infrastructure to collect these reports automatically, so this article explains how to enable generating them on operating systems where we know how.
+Crash dumps can help figure out why Drawpile crashed. They are files that get created if the program crashes and let a developer take a look at where things went wrong. They help a lot in fixing bugs, so enabling them and sending them in is greatly appreciated.
 
 If you want to send these files to a developer, take a look at [the main help page](https://drawpile.net/help/){:target="_blank"} for how to get in contact.
 
-Note that you have to enable crash reports in advance. Any information about crashes that happened before that are lost to time.
+Note that you have to enable crash dumps in advance. Any information about crashes that happened before that are lost to time.
 
 ## Windows
 
