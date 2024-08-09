@@ -13,6 +13,9 @@ If you want to send these files to a developer, take a look at [the main help pa
 
 Note that you have to enable crash dumps in advance. Any information about crashes that happened before that are lost to time.
 
+* Table of contents
+{:toc}
+
 ## Windows
 
 You can use the following registry scripts to enable and disable crash report generation. Download these files (there's a download button at the top-right), then double-click on them to execute them.
@@ -23,6 +26,20 @@ You can use the following registry scripts to enable and disable crash report ge
 After you enabled them and Drawpile crashes, a dump file will be created. To locate it, open the file explorer and type `%LOCALAPPDATA%` into the bar at the top and hit the enter key. Then locate the CrashDumps folder and open it. Inside, there should be crash dump files, the ones pertaining to Drawpile should contain `drawpile` in their name somewhere.
 
 If you want more details on how this works or want to customize the way these dumps are created, you can read [Microsoft's documentation on the matter](https://learn.microsoft.com/en-us/windows/win32/wer/collecting-user-mode-dumps){:target="_blank"}.
+
+## macOS
+
+On macOS, you should get crash records by default. These aren't full crash dumps, but usually still contain enough information for a developer to figure out what went wrong, so they are very helpful to have. The following instructions were contributed by [Axocrat](https://twitter.com/axocract){:target="_blank"}.
+
+The Console application on macOS has a record of every crash and fail on your computer. Unless you did something to manually disable it, it was likely automatically enabled when setting up your Mac. You can find the Console application by navigating to Launchpad on your Dock and searching "Console" in the search bar or by navigating to it in the first default “Other” folder. You can also find it in Finder → Applications → Utilities → Console.
+
+Once in Console, navigate to "Crash Reports" on the left hand side bar and use the search function to filter it by Drawpile. Then, select a specific crash report from the list (dates are shown).
+
+![Console application with a list of crash reports]({{ "/assets/img/help/crashdumpsmacos1.webp" | relative_url }})
+
+Highlight any amount of text in the report (it doesn't matter) and use the keyboard shortcut ⌘A to select all of it. You can now paste this crash report into Discord, a text file (on Mac, use TextEdit) or some other word processing software.
+
+![A single crash report selected in the Console application]({{ "/assets/img/help/crashdumpsmacos2.webp" | relative_url }})
 
 ## Linux
 
