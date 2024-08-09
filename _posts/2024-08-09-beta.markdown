@@ -8,8 +8,6 @@ tag: "@askmeaboutloom"
 
 The first Drawpile 2.2.2 has been released. You can download it [from the downloads section on drawpile.net](https://drawpile.net/download/#Beta){:target="_blank"}.
 
-## What's New
-
 To see everything that's new, you can [take a look at the changelog in the release announcement](https://drawpile.net/news/release-2.2.2-beta.3/){:target="_blank"}. However, here's some of the most notable things illustrated.
 
 ### Better Selections
