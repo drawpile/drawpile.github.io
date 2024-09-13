@@ -85,9 +85,28 @@ Sometimes cmake fails to generate the PDB paths (debug info stuff.) If that happ
 
 ## Android
 
-Unfortunately, building on Android is such a mess that there's currently no straight-forward instructions for it. Just about every update to the toolchain seems to break things in new and exciting ways.
+Android builds are only supported on Linux. Your mileage will vary on other operating systems.
 
-If you want to try anyway, your best bet is to look at [the GitHub Actions workflow](https://github.com/drawpile/Drawpile/blob/main/.github/workflows/main.yml){:target="_blank"} and follow things from there. Also, come join the Discord or IRC channel listed [on the help page](https://drawpile.net/help/) so that you can get some support and a place to rant on. If you succeed, we'll document the process here!
+1. Install OpenJDK 17. A different version of Java will likely not work.
+    * On Ubuntu and Debian, you can install the package `openjdk-17-jdk`. The package exists since Ubuntu 24.04 and Debian bookworm, older versions don't have it and you'll need to either upgrade or find some other source.
+    * On Arch, install `jdk17-opendk`.
+    * Other distributions should be similar.
+2. Make sure Java 17 is actually enabled by running `java -version`. If it doesn't print version 17, you may have multiple versions installed and need to switch to it.
+    * On Ubuntu, this can be done with `update-java-alternatives`.
+    * On Arch, run `sudo archlinux-java set java-17-openjdk`.
+    * Other distributions should be similar.
+3. Install [Android Studio](https://developer.android.com/studio){:target="_blank"}.
+    * Depending on your distribution, there may also be other ways of installing the Android SDK. For example, [Arch has some documentation on this](https://wiki.archlinux.org/title/Android#App_development){:target="_blank"}.
+4. Run `git clone https://github.com/drawpile/Drawpile.git` to clone Drawpile.
+5. Run `cd Drawpile` to switch into the directory you just cloned.
+6. Run `BUILD_TYPE=debug ANDROID_ABI=arm64-v8a pkg/android/build.bash setup` to set up and build the Android dependencies. This will take a while.
+7. Run `BUILD_TYPE=debug ANDROID_ABI=arm64-v8a pkg/android/build.bash configure` to configure Drawpile's build.
+    * This step may balk at conflicting Android packages that you may have installed earlier or were installed automatically. Follow the instructions the error provides you to uninstall those.
+8. Run `cmake --build buildandroid-arm64-v8a-debug`.
+
+This will give you an APK in `buildandroid-arm64-v8a-release/bin/Drawpile-XYZ.apk`, where XYZ is a version and a commit hash.
+
+The above will build for 64-bit ARM devices in debug mode. If you want a release build instead, replace `BUILD_TYPE=debug` in steps 6 and 7 with `BUILD_TYPE=release`. If you want an 64-bit Intel build instead to run in an emulator, use `ANDROID_ABI=x86_64`. The build directory at the end will be called something different accordingly.
 
 ## WebAssembly
 
