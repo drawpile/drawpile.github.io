@@ -26,7 +26,7 @@ Compiling software on Linux is usually pretty easy, the setup should only take a
 
 The following instructions should work on **Ubuntu**, **Debian** and anything based on them. For other distributions, you'll have to find the matching dependencies for the stuff listed in step 1. If you need help with this (or anything else), take a look at [the help page](https://drawpile.net/help/) on how to get in touch.
 
-1. Open a terminal and run `sudo apt install build-essential cmake git libqt6svg6 qt6-base-dev qt6-multimedia-dev qt6-tools-dev qt6-websockets-dev libxkbcommon-dev libzip-dev zipcmp zipmerge ziptool libmicrohttpd-dev libsodium-dev libsystemd-dev qtkeychain-qt6-dev`
+1. Open a terminal and run `sudo apt install build-essential cmake git libqt6svg6 qt6-base-dev qt6-l10n-tools qt6-multimedia-dev qt6-tools-dev qt6-websockets-dev libxkbcommon-dev libzip-dev zipcmp zipmerge ziptool libmicrohttpd-dev libsodium-dev libsystemd-dev qtkeychain-qt6-dev libwebp-dev`
 2. [Install Rust](https://www.rust-lang.org/tools/install){:target="_blank"}
 3. Run `git clone https://github.com/drawpile/Drawpile.git` to clone Drawpile
 4. Run `cd Drawpile` to switch into the directory you just cloned
