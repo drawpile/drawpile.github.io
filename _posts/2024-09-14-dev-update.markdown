@@ -26,6 +26,8 @@ The number of brush slots is now configurable in the tool preferences. The defau
 
 When you set the slot count to 1, the slot will show a brush icon instead of a number, making it look a bit nicer.
 
+This was suggested by vipperz [on GitHub](https://github.com/drawpile/Drawpile/issues/1141){:target="_blank"}.
+
 <video controls>
   <source src="{{ "/assets/vid/2024-09-14_slotcount.mp4" | relative_url }}" type="video/mp4"/>
 </video>
