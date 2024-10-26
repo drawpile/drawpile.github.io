@@ -62,6 +62,38 @@ There's now a Matrix room for Drawpile, which you can find at <https://drawpile.
 
 Thanks to Tom the Dragon for setting this up and providing the bridge.
 
+## Less Annotation Mess
+
+Annotations (or "text boxes") now delete themselves if you click away from them while they are empty. This avoids the all too common mess of having empty text boxes strewn about the canvas where someone just wanted to click away from one of their text boxes or something. If you did want that empty text box, you can hit undo and it will return. This was suggested by [MorrowShore on GitHub](https://github.com/drawpile/Drawpile/issues/1351){:target="_blank"}.
+
+Similarly, clicking off of an annotation will now only deselect it on the first click, rather than immediately create a new annotation in the spot you clicked. This should prevent the creation of those nonsense annotations in the first place in many cases.
+
+Also, as a very minor thing, Edit → Delete Empty Annotations can now be undone without also undoing the thing that happened before it.
+
+## Permission Clarification
+
+When you don't have the permission to do something, Drawpile now shows a clear message about it in many cases. Previously, they would usually just disable the action or tool that actuated them, which was pretty confusing because things would seemingly just "not work" for no explicable reason.
+
+Undo, redo, filling/recoloring/color erasing/clearing a selection, cutting and pasting now show a message about which permission you are missing if you're not allowed to perform them.
+
+If you try to apply a transform that you're not allowed to apply, you will get a message to that effect and the transform won't be applied. If you don't have any transform permission Drawpile will also refuse to start the transform at all, but certain transforms need to do a cut and paste internally, in which so you need those permissions for them.
+
+The fill tool now shows an appropriate message in its settings when you don't have permission to use it and it will say "tool is locked" in the corner. Previously, it wouldn't even let you select the tool, which was pretty confusing.
+
+The laser pointer also behaves like this when you don't have permission to use it, but also when you disabled laser trails in the View menu. In the latter case, it will prompt you to re-enable it.
+
+Finally, the annotation tool will also tell you if you have annotations disabled in the View menu and prompt you to re-enable them. If you don't have permission to create annotations, it will tell you about that when you attempt to create one, but you can still edit them as normal.
+
+Issues in this direction where reported by [Venesio on GitHub](https://github.com/drawpile/Drawpile/issues/1197){:target="_blank"}.
+
+## Expansion Prompt
+
+When you activate one of the expand up/down/left/right actions, they will no longer immediately resize the canvas in that direction. Instead, the resize canvas dialog will open. However, the shortcuts continue to work in this dialog, so you can keep hitting the same button as before, you just have to confirm it by hitting Enter at the end. You can also hold down those shortcuts now, which will make them auto-repeat and keep expanding in that direction.
+
+Doing it this way has significant performance advantages. Resizing the canvas is a pretty slow and expensive operation, so doing it all in one step is much faster than doing a bunch of individual resize operations. Prompting you to confirm the resize also prevents the all too common accidental resize, where someone accidentally mashed one of the four shortcuts along the way and expanded the canvas in some random direction, messing up some art piece in a corner on accident.
+
+Parts of this were suggested by [tobiasBora on GitHub](https://github.com/drawpile/Drawpile/issues/901){:target="_blank"}.
+
 ## Minor Additions and Bugfixes
 
 There's now [installation instructions for macOS Sequoia](/help/tech/installation){:target="_blank"}, because Apple made that much more difficult. This was contributed by Axocrat.
