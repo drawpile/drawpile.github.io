@@ -120,7 +120,7 @@ The above will build for 64-bit ARM devices in debug mode. If you want a release
 
 Building on WebAssembly has only been tested on Linux. Your mileage may vary on other operating systems.
 
-You will need to install the prerequisites to build Qt on your host system. On Debian-based systems, this also includes `ninja-build`, `libfontconfig1-dev` and `libssl-dev`.
+You will need to install the prerequisites to build Qt on your host system. On Debian-based systems, this also includes `ninja-build`, `nodejs`, `npm`, `libfontconfig1-dev` and `libssl-dev`.
 
 ```sh
 # Get the Emscripten SDK, version 3.1.50
@@ -137,11 +137,14 @@ cd Drawpile
 # Activate Emscripten in your current shell
 . ../emsdk/emsdk_env.sh
 
-# Set up the dependencies (will take several hours)
-pkg/emscripten/setup.bash debug
+# Set up Qt on the host system. Takes a while!
+pkg/emscripten/build.bash hostsetup
 
-# Configure Drawpile
-pkg/emscripten/configure.bash debug
+# Set up dependencies. Also takes a while!
+BUILD_TYPE=debug pkg/emscripten/build.bash emsetup
+
+# Configure the build of Drawpile.
+BUILD_TYPE=debug pkg/emscripten/build.bash configure
 
 # Build it (linking will take several minutes)
 cmake --build buildemdebug
