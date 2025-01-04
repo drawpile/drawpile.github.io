@@ -114,6 +114,16 @@ If you really need an alpha-locked layer, you can use another layer in Recolor m
 
 ![Recolor mode on brushes]({{ "/assets/img/help/recolor.webp" | relative_url }})
 
+### How do I change the DPI/PPI?
+
+This question comes up pretty regularly, but it's usually because of misconceptions and misinformation about what DPI/PPI actually do.
+
+DPI stands for "dots per inch", PPI stands for "pixels per inch". They measure how many pixels a printer would put into an inch of paper.
+
+Drawpile doesn't support printing and it always measures canvas sizes in pixels, never inches or centimeters. That means changing the DPI/PPI wouldn't do anything, it's meaningless in digital drawing.
+
+If what you're actually trying to do is change the canvas size, go into "Edit" in the top menu and click on "Resize Canvas". There you can change the size.
+
 
 ## Tech
 
