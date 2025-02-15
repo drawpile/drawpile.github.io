@@ -54,6 +54,8 @@ The reverse proxy is *required* because drawpile-srv does not currently support 
 
 If you're using nginx, you can use the following configuration. Put it into a server block that's listening to port 443 and has TLS certificates set up in it.
 
+*Note*: the configuration below has been updated on February 15, 2025. If you're getting 403 errors trying to connect from the Drawpile application, you may need to change the Origin check.
+
 ```nginx
 # Don't change the location, invite links only work with this one.
 location /drawpile-web/ws {
@@ -62,8 +64,10 @@ location /drawpile-web/ws {
     # make a connection. Also, DO NOT change this to your own hostname, it
     # will make the client on web.drawpile.net and the Chinese mirror on
     # web.foxdice.cn stop working. If you want to allow other origins, you
-    # can add them here of course.
-    if ($http_origin !~ "^https://web\.(drawpile\.net|foxdice\.cn)$") {
+    # can add them here of course. This configuration also allows connections
+    # from the Drawpile application using an empty origin, whereas browsers are
+    # guaranteed to always set a non-empty origin.
+    if ($http_origin !~ "^(https://web\.(drawpile\.net|foxdice\.cn))?$") {
         return 403;
     }
     # Same port as you passed to drawpile-srv via --websocket-port.
