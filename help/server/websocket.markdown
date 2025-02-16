@@ -48,7 +48,7 @@ TLS certificates are *required*. The web browser client can only run on HTTPS we
 
 ### Reverse Proxy
 
-A reverse proxy will take a WebSocket connection to your server and forward it to drawpile-srv. It is used to apply the TLS certificates and is generally a good idea, since having a web server
+A reverse proxy will take a WebSocket connection to your server and forward it to drawpile-srv. It is used to apply the TLS certificates and is generally a good idea, since having a web server gives better security and doesn't restrict you to only running Drawpile on that machine.
 
 The reverse proxy is *required* because drawpile-srv does not currently support TLS for its WebSockets directly (but someone could [contribute it](https://docs.drawpile.net/help/development/contributing)), and TLS is required for the reasons given above.
 
