@@ -82,6 +82,8 @@ The C++ language and the Qt framework have some parts that should either be avoi
 
 * Avoid using Qt enums in settings directly, use their integer values instead. The enums are fragile, you can't move or rename them without them breaking. They also break when switching between Qt5 and Qt6.
 
+* Avoid Qt interfaces that start a nested event loop, such as `QDialog::exec` or the static functions in `QMessageBox` and `QInputDialog`. Basically anything that opens a dialog and then returns the result when the user closes it, suspending the current function. This kind of thing is not properly supported under WebAssembly.
+
 * Avoid dealing with settings or Qt metatype attributes during static initialization. They wouldn't be loaded properly yet and will cause assertion failures when using Qt in debug mode.
 
 * Avoid Qt's synchronization primitives (QMutex & friends) in places where performance matters. On Windows, they are extremely slow. Use DP\_Mutex & friends instead, they wrap the platform's synchronization primitives instead and are much faster.
