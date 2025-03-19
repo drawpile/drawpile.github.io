@@ -48,7 +48,7 @@ You can choose the setting you want to edit in the list on the left. The individ
 
 The curve below lets you adjust how the dynamics affect the value. On the X axis, 0.0 is the weakest pressure, slowest speed or smallest distance, 1.0 is the strongest, fastest or largest. On the Y axis, 0.0 is the minimum value, 1.0 is the maximum value. You can Copy and Paste curves; they are copied as text, so you can share them in chat too. Apply to All will apply the chosen curve to all of Size, Opacity, Hardness and Smudging. Under Presets, you can save and load curves.
 
-Configuring MyPaint brushes looks different and is more involved. You can find more information on how to configure these brushes online, the information you find generally also applies to Drawpile and the editor has the same controls. You can also get an explanation of all the settings and inputs by hovering your cursor over them, a tooltip will appear.
+Configuring MyPaint brushes looks different and is more involved. Take a look at [the dedicated article on configuring MyPaint brush settings](mypaint).
 
 Changing a brush's settings will not automatically save it. You have to either save it as a new brush preset overwrite an existing one, see [the brush presets section](#brush-presets) below.
 
