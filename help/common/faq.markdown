@@ -145,7 +145,7 @@ Yes, it's available [on the Download page](https://drawpile.net/download/#Androi
 
 ### Can I use Drawpile on my iPad?
 
-The browser version of Drawpile works on the iPad. It's currently in development and not yet generally available, but is coming.
+You can use the web browser version. See [the Browser section on the Downloads page](https://drawpile.net/download/#Browser).
 
 For a native application, Apple doesn't allow Drawpile in its App Store. There may be hope with regards to Apple being forced to open up their platform or via sideloading, but currently we don't have any developer that has the necessary devices and subscriptions to even try it out.
 
