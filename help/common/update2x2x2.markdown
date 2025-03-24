@@ -106,7 +106,7 @@ You can disable or configure these gestures under Edit → Preferences, in the T
 
 Touch zooming and rotation has also been improved to deal with weird devices and touch interactions when you lift and put down a finger again.
 
-![Touch settings]({{ "/assets/img/help/touch2x2x2.webp" | relative_url }})
+![Touch settings]({{ "/assets/img/help/inputtouch.webp" | relative_url }})
 
 ## Animation Stuff
 
