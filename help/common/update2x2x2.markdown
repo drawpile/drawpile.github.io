@@ -11,6 +11,8 @@ Drawpile version 2.2.2 brings a lot of new features compared to version 2.2.1. H
 
 At the time of writing, it's still waiting for some translations to other languages to finish, but nothing's changing about the code anymore. So if you don't want to wait for that, you can [install the alpha release](https://github.com/drawpile/Drawpile/releases/tag/continuous){:target="_blank"} right now.
 
+The following is an illustrated guide showing off what changed in this version.
+
 * Table of contents
 {:toc}
 
@@ -52,7 +54,7 @@ You can also rearrange, group, change permissions or merge multiple layers by se
 
 ## Brush Improvements
 
-Brushes will now remember changes to them by default, rather than resetting to their original state when you select a different one. Resetting the brush is now done explicitly instead. Your selected brush is now also shown in the tool dock. If you don't like this behavior, you can turn off attaching brushes to slots again in the too preferences.
+Brushes will now remember changes to them by default, rather than resetting to their original state when you select a different one. Resetting the brush is now done explicitly instead. Your selected brush is now also shown in the tool dock. If you don't like this behavior, you can turn off attaching brushes to slots again in the tool preferences.
 
 In the tool preferences as well, you can now change how many brush slots you want to have, going up to 9 plus the eraser slot. You can also effectively remove the brush slots entirely by setting them to 1, which will instead just display buttons for the brush and the earser.
 
@@ -181,7 +183,7 @@ If you really want to know all the changes, you can look at [the full changelog]
 * The default undo limit is now 60 instead of 30. You can still configure it however you want it to be per session and when offline of course.
 * There's now a hardware-accelerated canvas renderer, enabled by default on Android and the browser. You can enable it in the preferences, although it depends on your video card and drivers if this is faster, especially laptops with dual GPU can end up with input lag.
 * You can now import MyPaint brushes in old version formats.
-* Serializing the canvas has been sped up by a lot. This makes it faster to host, compress and reset it. It also no longer causes the application to hang and potentially time out when someone new connects.
+* Serializing the canvas has been sped up by a lot. This makes it faster to host, compress and reset it. It also no longer causes the application to chug when using the builtin server and someone new joins.
 * Resizing the canvas with Ctrl+H/J/K/L now opens the resize canvas dialog instead of doing it immediately and causing everyone to chug. The keys still work in the dialog and auto-repeat now, so this should effectively mean less key presses overall.
 * Drawpile can now open and export WEBP files.
 * Invite codes on servers that support and allow it, letting you invite people without giving them the session password and bypassing usual join restrictions.
