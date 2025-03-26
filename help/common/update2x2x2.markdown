@@ -9,7 +9,7 @@ tag: help common
 
 Drawpile version 2.2.2 brings a lot of new features compared to version 2.2.1. However, like the small version number change implies, everything is still fully compatible with the previous version. You can update to the new version even if the other people you're drawing with haven't yet.
 
-At the time of writing, it's still waiting for some translations to other languages to finish, but nothing's changing about the code anymore. So if you don't want to wait for that, you can [install the alpha release](https://github.com/drawpile/Drawpile/releases/tag/continuous){:target="_blank"} right now.
+To install it, [take a look at the release announcement](https://drawpile.net/news/release-2.2.2/){:target="_blank"} or [go straight to the downloads page to download and install it](https://drawpile.net/download/){:target="_blank"}.
 
 The following is an illustrated guide showing off what changed in this version.
 
