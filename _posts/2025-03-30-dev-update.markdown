@@ -23,7 +23,7 @@ Work on Drawpile version 2.3.0 has begun. I don't really have a solid roadmap fo
 The vague idea of a roadmap for the protocol-related changes are:
 
 * Clipping groups and explicit alpha preserve, see below.
-* Fixing the indirect mode blend mdoe so that it doesn't look weird on soft brushes.
+* Fixing the indirect mode blend mode so that it doesn't look weird on soft brushes.
 * Adding a "compare density" brush blend mode, which is actually the above indirect blend mode.
 * Making selections mask brushes. That is, when there's a selection, the brush strokes will not spill out of it.
 * Letting you use arbitrary blend modes for MyPaint brushes.
@@ -75,7 +75,7 @@ This feature is working for layers, but not yet for brushes, the fill tool or th
 
 ## Canvas File Format
 
-The new canvas file format [talked about in the last blog entry](/devblog/2025/03/15/dev-update.html#project-file-format){:target="_blank"} has gained some additions thanks to Bonblii [on Discord](htps://drawpile.net/discord/){:target="_blank"}. By rearranging the way the pixel data is stored, the file size has been reduced by a good bit smaller, leading to the files to be almost always smaller than the equivalent ORA file.
+The new canvas file format [talked about in the last blog entry](/devblog/2025/03/15/dev-update.html#project-file-format){:target="_blank"} has gained some additions thanks to Bonbli [on Discord](htps://drawpile.net/discord/){:target="_blank"}. By rearranging the way the pixel data is stored, the file size has been reduced by a good bit smaller, leading to the files to be almost always smaller than the equivalent ORA file.
 
 That means the new format is now both a bit smaller *and* over thirty times faster to save and load than ORA.
 
