@@ -6,7 +6,7 @@ category: "devblog"
 tag: "@askmeaboutloom"
 ---
 
-The last week have seen more developments on the next version of Drawpile. [Last week's dev update](/devblog/2025/03/30/dev-update){:target="_blank"} already included some new features and plans.
+The last week have seen more developments on the next version of Drawpile. [Last week's dev update](/devblog/2025/03/29/dev-update){:target="_blank"} already included some new features and plans.
 
 ## Color Marking
 
