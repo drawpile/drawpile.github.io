@@ -36,4 +36,4 @@ You can also change the color of the selection mask now, via View → Set Select
 
 ## Minor Additions and Bugfixes
 
-Fixed a rare crash that could cause a crash if you had many brushes with the same name assigned to the same shortcut. This was reported by Blozzom [on Discord](https://drawpile.net/discord/){:target="_blank"}.
+Fixed a rare crash that could occur if you had many brushes with the same name assigned to the same shortcut. This was reported by Blozzom [on Discord](https://drawpile.net/discord/){:target="_blank"}.
