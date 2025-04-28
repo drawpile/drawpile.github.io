@@ -94,9 +94,10 @@ The syntax is `username:password:FLAGS`
 
 Currently, the following password formats are supported:
 
-* plaintext: `plain;my password here`
-* Salted SHA1: `s+sha1;salt;hash`, where `salt` and `hash` are hex encoded bytestrings and `hash` is SHA1(salt+hash)
-* PBKDF2: `s+pbkdf;1;salt;expected`, where `salt` and `hash` are base64-encoded bytestrings.
+* plaintext: `plain;PASSWORD`, where `PASSWORD` is the password in plain text.
+* Salted SHA1: `s+sha1;SALT;HASH`, where `SALT` is the hex-encoded salt and `HASH` is the hex-encoded SHA1 hash of the salt concatenated with the password.
+* PBKDF2: `pbkdf2;1;SALT;HASH`, where `SALT` is the base64-encoded salt and `HASH` is the base64-encoded PBKDF2 derivation as given by `QPasswordDigestor::deriveKeyPbkdf2`.
+* Sodium password hash: `sodium;HASH`, where `HASH` is a base64-encoded value from libsodium's `crypto_pwhash_str`.
 
 Prefixing the password field with `*` will mark the username as banned. E.g. `admin:*plain;abc123;MOD`
 
