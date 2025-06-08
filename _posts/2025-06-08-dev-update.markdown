@@ -16,7 +16,7 @@ There's now a new "lasso fill" tool. It works similar to performing a lasso sele
 
 Lasso fills are previewed locally first, just like the flood fill tool. While this isn't really necessary to avoid "flashbanging" issues, it reduces the amount of data that needs to be sent over the network and makes quick undos instantaneous, so I think it makes sense to have. When you start another fill, switch tools, press the apply button or hit enter, the fill will become visible for everyone, so you normally shouldn't notice any difference.
 
-This was suggested by EvilKitty3 [on GitHub](https://github.com/drawpile/Drawpile/issues/324){:target="_blank"}, Juzeror[on Discord](https://drawpile.net/discord/){:target="_blank"} as well as Fallen, Geese and MorrowShore directly. It's backward compatible and available in sessions hsoted with Drawpile 2.2.
+This was suggested by EvilKitty3 [on GitHub](https://github.com/drawpile/Drawpile/issues/324){:target="_blank"}, Juzeror[on Discord](https://drawpile.net/discord/){:target="_blank"} as well as Fallen, Geese and MorrowShore directly. It's backward compatible and available in sessions hosted with Drawpile 2.2.
 
 <video controls>
   <source src="{{ "/assets/vid/2025-06-08_lassofill.mp4" | relative_url }}" type="video/mp4"/>
@@ -60,6 +60,6 @@ Many 2.2 compatibility mode issues have been fixed. Some of these can cause desy
 
 Pigment mode smudging handles its opacity properly. Previously it would end up doubling up on it compared to Normal mode. This was reported by xxxx.
 
-The drawpile-timelapse command now has a `-B`/`--background-color` option to let you override the canvas background color. This was suggessted by Bluestrings [on Discord](https://drawpile.net/discord/){:target="_blank"}.
+The drawpile-timelapse command now has a `-B`/`--background-color` option to let you override the canvas background color. This was suggested by Bluestrings [on Discord](https://drawpile.net/discord/){:target="_blank"}.
 
 You can now open and export files in the Quite Okay Image format (QOI). This mostly fell out of testing if it would make DPCS or session reset sizes smaller, which it didn't, but since it's very little code and doesn't require additional dependencies, the format is allowed to stay in this form.
