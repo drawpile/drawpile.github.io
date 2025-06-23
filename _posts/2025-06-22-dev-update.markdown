@@ -58,7 +58,7 @@ There's also some extra space at the bottom-left edge, since some devices have s
 
 You can now assign keyboard shortcuts to tool blend modes, to let you e.g. assign Behind or Pigment mode to a keyboard shortcut. This was suggested by Izzy and Meru [on Discord](https://drawpile.net/discord/){:target="_blank"}.
 
-The eraser side of pens is now properly detected on Android. Since Android doesn't tell Drawpile that you're using the eraser until it hits the surface, doing so will erase with your current brush, like it works in the browser. This was reported
+The eraser side of pens is now properly detected on Android. Since Android doesn't tell Drawpile that you're using the eraser until it hits the surface, doing so will erase with your current brush, like it works in the browser. This was reported by CosmosX007 [on Discord](https://drawpile.net/discord/){:target="_blank"}.
 
 The connection quality setting now works properly when choosing who to pick for a session autoreset. Previously the server and client would get things jumbled between each other. Newer clients will indicate that they have fixed this issue, so just updating the server will make it work for everyone. This was reported by Blozzom and grimsley [on Discord](https://drawpile.net/discord/){:target="_blank"}.
 
