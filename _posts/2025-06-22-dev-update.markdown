@@ -1,7 +1,7 @@
 ---
 layout: drawpile_post
 title: "Dev Update: Week 24 and 25 of 2025"
-date: 2025-06-08 00:00:00 +0200
+date: 2025-06-22 00:00:00 +0200
 category: "devblog"
 tag: "@askmeaboutloom"
 ---
