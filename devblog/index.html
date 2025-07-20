@@ -15,7 +15,7 @@ description: "Regular posts about what's going on with Drawpile's development."
     {%- for post in posts -%}
       <article>
         <h2 id="post-{{post.slug}}" class="title is-4">{{ post.title | escape }}</h2>
-        <h3 class="subtitle is-6">{{ post.date | date: "%B %-d, %Y" }} by {{ post.tags | where_exp: "item", "item contains '@'" | first | remove: "@" }}</h3>
+        <h3 class="subtitle is-6">{{ post.date | date: "%B %-d, %Y" }}</h3>
         <div class="content">
           {{ post.excerpt }}
           <p><a href="{{ post.url }}">Read more…</a></p>
