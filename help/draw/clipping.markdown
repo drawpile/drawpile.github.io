@@ -9,6 +9,10 @@ tag: help draw
 
 *This article is available in the following languages:* English, [*German*](clipping.de_DE).
 
+<div class="notification">
+    <strong>Note:</strong> Drawpile 2.3 (currently in beta) adds <a href="/help/common/update2x3x0#layer-clipping-23-only">Clip to Layer Below</a> and <a href="/help/common/update2x3x0#explicit-inheritpreserve-alpha-23-only">Inherit Alpha</a> options for clipping. The below information is about Drawpile 2.2.
+</div>
+
 Drawpile supports alpha preserve on layers. This is also known by various other names, like "clipping groups" or "inherit alpha". What it means is that you have a layer that doesn't add new pixels to the canvas, it only modifies something below it. It's frequently used for shading and lighting.
 
 In Drawpile, all blend modes except Normal and Erase preserve alpha. That means you don't need to do anything special to enable it, just stick your layers into a group . So, for example, if you want to do shading, you'd arrange your layers like this:
@@ -38,6 +42,10 @@ The above kinds of arrangements should be enough in most cases. If you really *d
 Now when you draw on the **Mask** layer, it will mask off those parts on the layers below, giving you the same effect as a transparency mask.
 
 ## Alpha Lock
+
+<div class="notification">
+    <strong>Note:</strong> Drawpile 2.3 (currently in beta) adds <a href="/help/common/update2x3x0#layer-alpha-lock-22-compatible">alpha lock for layers</a>. The below information is about Drawpile 2.2.
+</div>
 
 Some programs let you "alpha lock" a layer, meaning when you draw on it, the opacity of the pixels on it won't change. In Drawpile, that's something you set on your brush, not on the layer.
 

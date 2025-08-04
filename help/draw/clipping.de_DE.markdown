@@ -9,6 +9,10 @@ tag: help draw lang_de
 
 *This article is available in the following languages:* [*English*](clipping), German.
 
+<div class="notification">
+    <strong>Hinweis:</strong> Drawpile 2.3 (aktuell in beta) fügt <a href="/help/common/update2x3x0#layer-clipping-23-only">durch Ebene darunter beschneiden</a> und <a href="/help/common/update2x3x0#explicit-inheritpreserve-alpha-23-only">Alpha erben</a> als Optionen für den Alpha-Erhalt hinzu. Die folgenden Informationen sind für Drawpile 2.2.
+</div>
+
 Drawpile unterstützt Alpha-Erhalt ("alpha preserve") auf Ebenen. Dies ist auch unter verschiedenen anderen Namen bekannt, zum Beispiel "Clipping-Gruppen" ("clipping groups") oder "Alpha-Vererbung" ("inherit alpha"). Es bedeutet, dass eine Ebene keine neuen Pixel zur Leinwand hinzufügt, sondern nur jene unter ihr verändert. Es wird oft für Schattierung und Belichtung verwendet.
 
 In Drawpile erhalten alle Mischmodi außer Normal und Radieren den Alphakanal. Das bedeutet, dass Sie nichts besonderes tun müssen, um es zu aktivieren, stecken Sie einfach Ihre Ebenen in eine Gruppe. Also, wenn sie zum Beispiel ein Bild schattieren wollen, ordnen Sie ihre Ebenen wie folgt an:
@@ -38,6 +42,10 @@ Die obigen Arten von Anordnungen sollten für die meisten Fälle genügen. Wenn 
 Wenn Sie nun auf die Ebene **Maske** malen, wird sie diese Teile der darunterliegenden Ebenen maskieren, was den gleichen Effekt wie eine Transparenzmaske hat.
 
 ## Alpha-Sperre
+
+<div class="notification">
+    <strong>Hinweis:</strong> Drawpile 2.3 (aktuell in beta) fügt <a href="/help/common/update2x3x0#layer-alpha-lock-22-compatible">Alpha-Sperre für Ebenen</a> als Option für Alpha-Sperren hinzu. Die folgenden Informationen sind für Drawpile 2.2.
+</div>
 
 Einige Programme erlauben das aktivieren einer "Alpha-Sperre" ("alpha lock") auf einer Ebene, wodurch das Malen darauf die Transparenz existierender Pixel nicht beeinflusst. In Drawpile ist dies eine Eigenschaft des Pinsels, nicht eine der Ebene.
 
