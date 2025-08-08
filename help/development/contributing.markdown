@@ -69,6 +69,10 @@ You could help developers pinpoint the cause of problems by recreating the probl
 
 Additional testing for new or experimental features is always valuable, especially since your devices and cirumstances is likely unique. Description of your experience will help developers improve the features for everyone.
 
+### Donations
+
+You can donate to Drawpile at <https://donate.drawpile.org/>. This helps spend move time on development and pay to keep the servers running.
+
 ---
 ## Development Contribution
 
