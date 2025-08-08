@@ -171,7 +171,9 @@ The list server is written in Go. The website is in Python. Web frontends are in
 
 ### Can I donate money to Drawpile?
 
-Thanks for considering it! It's currently not possible to do so, since we don't have the necessary organizational structure.
+Yes, go to <https://donate.drawpile.org/>, all the donation options available are linked there.
+
+If something doesn't work or you need another currency or anything else, [get in contact](https://drawpile.net/help/)!
 
 ### Can I contribute to Drawpile?
 
