@@ -13,7 +13,7 @@ tag: help common
 
 Drawpile 2.3.0 has lots of new features over versions 2.2.x. It is still [backward compatible](#compatibility) though, meaning you can use the new version and still draw with people using the previous one.
 
-To install it, [take a look at the release announcement](https://drawpile.net/news/release-2.3.0-beta.1/){:target="_blank"} or [go straight to the downloads page to grab and install it](https://drawpile.net/download/#Beta).
+To install it, [take a look at the release announcement](https://drawpile.net/news/release-2.3.0-beta.2/){:target="_blank"} or [go straight to the downloads page to grab and install it](https://drawpile.net/download/#Beta).
 
 Below is an illustrated guide showing off most of the new features in this version.
 

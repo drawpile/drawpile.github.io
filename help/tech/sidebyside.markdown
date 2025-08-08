@@ -9,7 +9,7 @@ tag: help tech
 
 This article explains how you can install alpha and beta releases of Drawpile on different systems.
 
-It also explains how you can install both the main and an alpha or beta version at once. The latter use a different icon so you can tell them apart.
+It also explains how you can install both the main and an alpha or beta version at once.
 
 If you have trouble getting this to work, questions or know of a better way of doing it, <a href="https://drawpile.net/help/" target="_blank">take a look at the help page on how to get in contact!</a>
 
@@ -24,7 +24,7 @@ It's recommended that you install the newer version (beta or alpha) and keep usi
 
 ## Web Browser
 
-The browser version lets you pick which version you want to use. Just choose it from the "Version" drop-down. The icon at the top will change depending on what you picked.
+The browser version lets you pick which version you want to use. Just choose it from the "Version" drop-down.
 
 Invite links to sessions that can only be joined with specific versions will gray out any other option. So if you can't pick one of them, it means that you wouldn't be able to join the session with it.
 
