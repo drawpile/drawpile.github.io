@@ -7,7 +7,7 @@ category: "help"
 tag: help tech
 ---
 
-This article is a work in progress. The browser version of Drawpile is currently in development. If you want to follow it closer, take a look at [this GitHub issue](https://github.com/drawpile/Drawpile/issues/1175){:target="_blank"}.
+This is a collection of browser-specific issues. If there's something you have trouble with not listed here, take a look at [the main help page](https://drawpile.net/help/) for ways to ask about it!
 
 ## SharedArrayBuffer Issues
 
