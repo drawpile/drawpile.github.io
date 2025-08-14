@@ -13,7 +13,7 @@ tag: help common
 
 Drawpile 2.3.0 has lots of new features over versions 2.2.x. It is still [backward compatible](#compatibility) though, meaning you can use the new version and still draw with people using the previous one.
 
-To install it, [take a look at the release announcement](https://drawpile.net/news/release-2.3.0-beta.2/){:target="_blank"} or [go straight to the downloads page to grab and install it](https://drawpile.net/download/#Beta).
+To install it, [take a look at the release announcement](https://drawpile.net/news/release-2.3.0-beta.3/){:target="_blank"} or [go straight to the downloads page to grab and install it](https://drawpile.net/download/#Beta).
 
 Below is an illustrated guide showing off most of the new features in this version.
 
@@ -47,6 +47,7 @@ Below is an illustrated guide showing off most of the new features in this versi
   </li>
   <li><a href="#blend-mode-shortcuts-22-compatible" id="markdown-toc-blend-mode-shortcuts-22-compatible">Blend Mode Shortcuts</a></li>
   <li><a href="#pixel-perfect-22-compatible" id="markdown-toc-pixel-perfect-22-compatible">Pixel-Perfect</a></li>
+  <li><a href="#pixel-art-input-22-compatible" id="markdown-toc-pixel-art-input-22-compatible">Pixel Art Input</a></li>
   <li><a href="#synchronized-smudging-22-compatible" id="markdown-toc-synchronized-smudging-22-compatible">Synchronized Smudging</a></li>
   <li><a href="#smudge-with-transparency-23-only" id="markdown-toc-smudge-with-transparency-23-only">Smudge with Transparency</a></li>
   <li><a href="#jitter-brush-setting-22-compatible" id="markdown-toc-jitter-brush-setting-22-compatible">Jitter Brush Setting</a></li>
@@ -277,6 +278,20 @@ For MyPaint brushes, enabling pixel-perfect will force the Hardness and Snap to 
 
 <video controls>
   <source src="{{ "/assets/vid/2025-07-20_pixelperfect.mp4" | relative_url }}" type="video/mp4"/>
+</video>
+
+## Pixel Art Input <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
+
+Drawpile normally does a bunch of processing to your inputs: it smoothes out inputs received from the tablet, connects the received positions with a proper curve, applies brush stabilization and disregards any jitter that happens at a sub-pixel level. Without it, brush strokes would come out looking pretty wavy and jaggy.
+
+However, if you're doing pixel art and want to poke at individual pixels directly, all of that just gets in the way. Of course you can turn most of this stuff off in the preferences, but that makes switching between the two annoying.
+
+So now you can enable "pixel art input" for round and square pixel brushes. It will turn off all the stuff meant for regular brush strokes and instead just immediately put down the brush wherever you're pointing. And it will only apply to the brushes you want to use for pixel art, without having to adjust your global settings.
+
+This will mix correctly with <a href="#pixel-perfect-22-compatible">the pixel-perfect setting</a>. That is, it will still delay putting down the stroke until you've moved at least two pixels, to avoid creating doubled-up lines and L-shaped jags.
+
+<video controls>
+  <source src="{{ "/assets/vid/help/pixelartinput.mp4" | relative_url }}" type="video/mp4"/>
 </video>
 
 ## Synchronized Smudging <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
