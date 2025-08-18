@@ -16,9 +16,9 @@ You can find out in detail what changed in version 2.3 [in this illustrated guid
 
 The reason it's at version 2.3.0-beta.3 is one very uninteresting hotfix and one fix where playing a sound on Windows could cause you to no longer be able to rearrange layers, export animations, open file pickers or other strange effects. The story behind that is pretty technical, so I'm putting it in a separate section, you can skip over it if that doesn't interest you.
 
-### The Audio Oddyssey
+### The Audio Odyssey
 
-The only thing Drawpile currently uses audio for is to make notification sounds. If someone joins or sends a message in chat or you get disconnected, it makes a bloop. The amount of grief and crashes that these little noises have called is pretty impressive.
+The only thing Drawpile currently uses audio for is to make notification sounds. If someone joins or sends a message in chat or you get disconnected, it makes a bloop. The amount of grief and crashes that these little noises have caused is pretty impressive.
 
 For quite a long time, Drawpile used Qt's multimedia framework to play these sounds. That framework is pretty heavyweight for playing sounds, since it supports a bunch of formats Drawpile doesn't need and can do video playback that isn't necessary. But since Qt is used for other stuff, it's a pretty logical choice.
 
