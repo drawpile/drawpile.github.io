@@ -2,9 +2,9 @@
 layout: drawpile_main
 ---
 
-* [News](https://drawpile.net/news/)
-* [About](https://drawpile.net/about/)
-* [Download](https://drawpile.net/download/)
+* [News]({{ "/news/" | relative_url }})
+* [About]({{ "/about/" | relative_url }})
+* [Download]({{ "/download/" | relative_url }})
 * [Help]({{ "/help/" | relative_url }})
-* [Communities](https://drawpile.net/communities/)
+* [Communities]({{ "/communities/" | relative_url }})
 * [Development Blog]({{ "/devblog/" | relative_url }})
