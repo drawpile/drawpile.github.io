@@ -34,6 +34,14 @@ Also, systemd socket activation has been removed. It was used to make the Drawpi
 
 Most of these were reported and requested by Bluestrings and Liz.
 
+## Binary Transform
+
+There's now a new interpolation option for transforms called "binary". It is an attempt to provide better scaling for artwork with hard edges than nearest-neighbor, which is very chunky, or bilinear, which makes everything blurry.
+
+The algorithm is effectively bilinear scaling with a threshold to decide whether a pixel is opaque or not. For colors, only existing colors are used, it doesn't "invent" new colors like bilinear does, preserving hard edges. This is basically just an algorithm I made up and it seems to work okay, maybe someone more math-inclined could improve it.
+
+For compatibility and to be able to expand it, this mode cuts and pastes the image when using it. This was suggested by TGS.
+
 ## Chattiness
 
 The chat now has a "send" button next to the input line. This is mostly useful for devices without a physical keyboard, where it can be annoying or non-obvious how to hit the enter key.
