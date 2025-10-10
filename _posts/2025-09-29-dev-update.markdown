@@ -1,7 +1,7 @@
 ---
 layout: drawpile_post
 title: "Dev Update: Week 38 and 39 of 2025"
-date: 2025-09-15 00:00:00 +0200
+date: 2025-09-29 00:00:00 +0200
 category: "devblog"
 tag: "@askmeaboutloom"
 ---
