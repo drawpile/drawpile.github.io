@@ -82,4 +82,4 @@ Changing the blend, alpha preserve and erase modes in the brush tool settings no
 
 Changing your shortcuts no longer causes Drawpile to lose track of all your brush shortcuts until you restart it. This was reported by cromachina [on GitHub](https://github.com/drawpile/Drawpile/issues/1532){:target="_blank"}.
 
-Entering an empty address in the join dialog now properly disables the join button, rather than letting you press it and then complaing that it can't connect to nothing.
+Entering an empty address in the join dialog now properly disables the join button, rather than letting you press it and then complaining that it can't connect to nothing.
