@@ -72,4 +72,14 @@ The zoom steps when using the mouse wheel or keyboard shortcuts have been adjust
 
 The drawpile-cmd command-line tool now actually writes to stdout when you pass `-` as the output file. It previously only claimed that it supported this in its help message, but didn't actually. This was reported by incoheart [on GitHub](https://github.com/drawpile/Drawpile/issues/1526){:target="_blank"}.
 
+Make Drawpile compatible with macOS Tahoe by compiling Qt without accessibility support. Something in that latest macOS version makes it blow up. I kind of doubt anyone was using those accessibility features though, so it should be okay. This was reported by kal^-^ [on IRC](https://drawpile.net/irc/){:target="_blank"}.
 
+Right-clicking with the lasso fill and gradient tool now properly cancels the operation, even when you have some canvas shortcut bound to right-click. This was reported by Blozzom [on Discord](https://drawpile.net/discord/){:target="_blank"}.
+
+The flipbook crop and frame range now get reset when you open a different canvas, rather than nonsensically carrying the values from a different canvas over.
+
+Changing the blend, alpha preserve and erase modes in the brush tool settings now properly remembers those changes. This was reported by cromachina [on GitHub](https://github.com/drawpile/Drawpile/issues/1530){:target="_blank"}.
+
+Changing your shortcuts no longer causes Drawpile to lose track of all your brush shortcuts until you restart it. This was reported by cromachina [on GitHub](https://github.com/drawpile/Drawpile/issues/1532){:target="_blank"}.
+
+Entering an empty address in the join dialog now properly disables the join button, rather than letting you press it and then complaing that it can't connect to nothing.
