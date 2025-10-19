@@ -26,6 +26,7 @@ Below is an illustrated guide showing off most of the new features in this versi
   <li><a href="#explicit-inheritpreserve-alpha-23-only" id="markdown-toc-explicit-inheritpreserve-alpha-23-only">Explicit Inherit/Preserve Alpha</a></li>
   <li><a href="#blend-mode-dependence-23-only" id="markdown-toc-blend-mode-dependence-23-only">Blend Mode Dependence</a></li>
   <li><a href="#layer-alpha-lock-22-compatible" id="markdown-toc-layer-alpha-lock-22-compatible">Layer Alpha Lock</a></li>
+  <li><a href="#anti-overflow-23-only" id="markdown-toc-anti-overflow-23-only">Anti-Overflow</a></li>
   <li><a href="#gradient-tool-22-compatible" id="markdown-toc-gradient-tool-22-compatible">Gradient Tool</a></li>
   <li><a href="#lasso-fill-tool-22-compatible" id="markdown-toc-lasso-fill-tool-22-compatible">Lasso Fill Tool</a></li>
   <li><a href="#drawing-toolbar-customization-22-compatible" id="markdown-toc-drawing-toolbar-customization-22-compatible">Drawing Toolbar Customization</a></li>
@@ -46,20 +47,28 @@ Below is an illustrated guide showing off most of the new features in this versi
     </ul>
   </li>
   <li><a href="#blend-mode-shortcuts-22-compatible" id="markdown-toc-blend-mode-shortcuts-22-compatible">Blend Mode Shortcuts</a></li>
+  <li><a href="#selection-action-bar-22-compatible" id="markdown-toc-selection-action-bar-22-compatible">Selection Action Bar</a></li>
+  <li><a href="#better-lock-and-view-mode-status-22-compatible" id="markdown-toc-better-lock-and-view-mode-status-22-compatible">Better Lock and View Mode Status</a></li>
+  <li><a href="#animation-timeline-additions-23-only" id="markdown-toc-animation-timeline-additions-23-only">Animation Timeline Additions</a></li>
   <li><a href="#pixel-perfect-22-compatible" id="markdown-toc-pixel-perfect-22-compatible">Pixel-Perfect</a></li>
   <li><a href="#pixel-art-input-22-compatible" id="markdown-toc-pixel-art-input-22-compatible">Pixel Art Input</a></li>
   <li><a href="#synchronized-smudging-22-compatible" id="markdown-toc-synchronized-smudging-22-compatible">Synchronized Smudging</a></li>
   <li><a href="#smudge-with-transparency-23-only" id="markdown-toc-smudge-with-transparency-23-only">Smudge with Transparency</a></li>
   <li><a href="#jitter-brush-setting-22-compatible" id="markdown-toc-jitter-brush-setting-22-compatible">Jitter Brush Setting</a></li>
+  <li><a href="#binary-transform-22-compatible" id="markdown-toc-binary-transform-22-compatible">Binary Transform</a></li>
   <li><a href="#color-harmony-swatches-22-compatible" id="markdown-toc-color-harmony-swatches-22-compatible">Color Harmony Swatches</a></li>
   <li><a href="#annotation-rendering-23-only" id="markdown-toc-annotation-rendering-23-only">Annotation Rendering</a></li>
   <li><a href="#better-annotation-box-background-22-compatible" id="markdown-toc-better-annotation-box-background-22-compatible">Better Annotation Box Background</a></li>
   <li><a href="#ctrld-and-escape-to-deselect-22-compatible" id="markdown-toc-ctrld-and-escape-to-deselect-22-compatible">Ctrl+D and Escape to Deselect</a></li>
   <li><a href="#switch-tool-and-deselect-22-compatible" id="markdown-toc-switch-tool-and-deselect-22-compatible">Switch Tool and Deselect</a></li>
   <li><a href="#more-layer-locks-23-only" id="markdown-toc-more-layer-locks-23-only">More Layer Locks</a></li>
+  <li><a href="#layer-blocking-22-compatible" id="markdown-toc-layer-blocking-22-compatible">Layer Blocking</a></li>
   <li><a href="#new-faster-file-format-22-compatible" id="markdown-toc-new-faster-file-format-22-compatible">New Faster File Format</a></li>
   <li><a href="#small-screen-mode-improvements-22-compatible" id="markdown-toc-small-screen-mode-improvements-22-compatible">Small-Screen Mode Improvements</a></li>
+  <li><a href="#chat-enhancements-22-compatible" id="markdown-toc-chat-enhancements-22-compatible">Chat Enhancements</a></li>
   <li><a href="#native-windows-on-arm-support-22-compatible" id="markdown-toc-native-windows-on-arm-support-22-compatible">Native Windows on ARM Support</a></li>
+  <li><a href="#fast-reconnects-22-compatible" id="markdown-toc-fast-reconnects-22-compatible">Fast Reconnects</a></li>
+  <li><a href="#more-stable-sockets-22-compatible" id="markdown-toc-more-stable-sockets-22-compatible">More Stable Sockets</a></li>
   <li><a href="#and-more-22-compatible" id="markdown-toc-and-more-22-compatible">And More</a></li>
 </ul>
 
@@ -113,6 +122,18 @@ This effectively the same as changing your tool's blend mode to preserve alpha. 
 
 <video controls>
   <source src="{{ "/assets/vid/help/alphalock.mp4" | relative_url }}" type="video/mp4"/>
+</video>
+
+## Anti-Overflow <a href="#feature-tags"><span class="tag is-medium has-text-weight-bold" title="Only available in sessions hosted with Drawpile 2.3.">2.3-only</span></a>
+
+Brushes now let you enable anti-overflow, letting you draw "within the lines" of another layer.
+
+To use it, enable it on your brush, then set your lines layer as the fill source. Then switch to your colors layer and draw there.
+
+Similar to the fill tool, you can adjust the tolerance and expand settings here to let your fills push into the lines.
+
+<video controls>
+  <source src="{{ "/assets/vid/help/antioverflow.mp4" | relative_url }}" type="video/mp4"/>
 </video>
 
 ## Gradient Tool <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
@@ -268,6 +289,48 @@ You can now assign shortcuts to switching your current tool to a specific blend 
 
 ![Blend mode shortcuts]({{ "/assets/img/help/blendmodeshortcuts.webp" | relative_url }})
 
+## Selection Action Bar <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
+
+When a selection is active, a new selection action bar will appear. By default it's in the bottom-left, but you can pick a different place for it if you prefer (or turn it off altogether.)
+
+One reason the bar is there is so that you can tell you have a selection active. This prevents forgetting about a selection that's off-screen and not being able to draw.
+
+The other is to give access to common actions, deselect in particular. If you don't have a keyboard, this cuts out the annoying extra click of going into the View menu or having to switch to the selection tool to get rid of a selection.
+
+When transforming, the bar contains transform actions instead, since you can't manipulate selections during it.
+
+<video controls>
+  <source src="{{ "/assets/vid/help/selectionactionbar.mp4" | relative_url }}" type="video/mp4"/>
+</video>
+
+## Better Lock and View Mode Status <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
+
+The on-canvas lock notice will now show buttons to resolve the lock if appropriate, rather than making you hunt through the UI to find where to do it. For example, if the canvas is locked and you are an operator, you'll get a button to unlock it. Or for the new anti-overflow feature, you will be prompted to set a layer as the fill source or disable the mode.
+
+Drawpile will also now indicate when you're in layer or group view here, with a button to get out of it. If you don't like that indicator, you can disable it. When animating in frame view mode, the prompt to exit it will show up when you switch to a layer that's not visible in the current frame.
+
+<video controls>
+  <source src="{{ "/assets/vid/help/lockstatus.mp4" | relative_url }}" type="video/mp4"/>
+</video>
+
+## Animation Timeline Additions <a href="#feature-tags"><span class="tag is-medium has-text-weight-bold" title="Only available in sessions hosted with Drawpile 2.3.">2.3-only</span></a>
+
+The timeline now lets you adjust the frame range of animations by dragging the handles at the top. It also no longer cuts off at the last frame, instead letting you move stuff beyond the end. You can also double-click the row of frame numbers or click the button at the top-right to edit the range directly.
+
+You can also edit the framerate (FPS) here, which allows fractional numbers now. The flipbook button has moved to the left and given a more obvious "play" label.
+
+Double-clicking on an empty frame is now a shortcut for creating an empty key frame there, rather than having to hunt for the button at the top. When you select a blank key frame that's not assigned to any layer, your layer selection will be cleared to avoid drawing on the wrong layer.
+
+Interacting with key frames to a sufficient degree now switches you to frame view mode automatically. You can use the buttons at the top of the timeline to get out of frame view or switch to a layer that's not part of the current key frame and use the prompt that shows up on the canvas.
+
+You can now increase and decrease the key frame exposure of all visible tracks at once, rather than having to do it to every track individually.
+
+Finally, canvases also now start with an empty track, just like they start with an empty layer.
+
+<video controls>
+  <source src="{{ "/assets/vid/help/timeline2x3x0.mp4" | relative_url }}" type="video/mp4"/>
+</video>
+
 ## Pixel-Perfect <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
 
 There’s now a "pixel-perfect" setting for the Drawpile pixel brushes and MyPaint brushes. The setting is available either in the paint mode drop-down at the top-right of the brush settings dock or in the brush settings dialog.
@@ -324,6 +387,16 @@ The MyPaint brush engine already had this setting and it continues to work like 
   <source src="{{ "/assets/vid/help/classicjitter.mp4" | relative_url }}" type="video/mp4"/>
 </video>
 
+## Binary Transform <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
+
+There's a new interpolation mode in the transform tool called "Binary" now. It's meant for art drawn with hard-edged brushes.
+
+The way it works is that it smoothes out the image, but keeps hard edges intact and colors the same. So it should end up with less jagged edges than Nearest, but not make your binary-brushed art look blurry like Bilinear does.
+
+<video controls>
+  <source src="{{ "/assets/vid/help/transformbinary.mp4" | relative_url }}" type="video/mp4"/>
+</video>
+
 ## Color Harmony Swatches <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
 
 The color wheel now lets you enable color harmony swatches underneath it, similar to how it works in Krita.
@@ -370,6 +443,16 @@ You can now not only lock the content of a layer, to prevent someone drawing on 
 
 ![Layer locks]({{ "/assets/img/2025-05-18_layerlocks.webp" | relative_url }})
 
+## Layer Blocking <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
+
+If there's something on a layer you don't want to see, you can now block it for yourself. This is similar to censoring the layer, in that it will replace its contents with a bunch of striped rectangles, but only for you instead of for everyone.
+
+This is usually better than hiding the layer because you'll still be able to tell where stuff is drawn on that layer and avoid drawing in the same space.
+
+<video controls>
+  <source src="{{ "/assets/vid/2025-08-31_blocklayer.mp4" | relative_url }}" type="video/mp4"/>
+</video>
+
 ## New Faster File Format <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
 
 There's now a new DPCS file format that is much faster - and in many cases also smaller - than ORA files. ORA continues to be available of course.
@@ -388,11 +471,39 @@ If you use Drawpile on a phone or some other device with a small or low-resoluti
 
 Under the **View** menu at the top, you can now enable **left-handed mode**, which will swap the sides of all docks and fold-out tabs. You can also **toggle the side or bottom toolbar** here now, if you don't want them permanently visible.
 
+## Chat Enhancements <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
+
+The chat now starts out hidden and only shows up when you connect to a session, since there's not much point in having it present when you're drawing offline. It also now remembers the size you had it at properly, rather than forgetting it when you hiding it.
+
+There's now a "Send" button, rather than requiring you to press enter to send. Mostly useful for on-screen keyboards that may treat the enter key weirdly.
+
+On desktop platforms, you can detach the chat three ways now: as a regular window, always on top of Drawpile and always on top of everything. Android and browser versions still can't pop out the chat.
+
+Dice rolls using `/roll` are highlighted in blue instead of looking the same as a `/me` message, which makes cheating less trivial. The message can also now be translated to other languages, rather than always being in English.
+
 ## Native Windows on ARM Support <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
 
 Drawpile 2.3 is available for Windows on ARM-based devices. If you don't know whether you own such a device: you probably don't.
 
 Before installing the ARM version, you'll probably want to uninstall any existing versions of Drawpile for Intel-based devices first. Not doing so may give you strange results, but those should also be fixable by uninstalling and then reinstalling them. Your settings won't be lost when you do this.
+
+## Fast Reconnects <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
+
+If the server you're drawing on has been updated, reconnects should now be faster by skipping the catch-up phase. Instead, you will only have to load what has been drawn since the time you disconnected. Especially on mobile devices that are prone to disconnecting very quickly, this should make things more comfortable.
+
+You will also no longer be asked to enter your username and password again when you reconnect anymore, they will be remembered automatically.
+
+## More Stable Sockets <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
+
+Drawpile will now try to use WebSockets for connections if possible, falling back to raw TCP if that doesn't work.
+
+One reason is stability. Some internet providers don't treat TCP connections properly or block them outright, whereas WebSockets run over the same system that browsers do, which don't get any of that interference.
+
+Another is that it makes it easier to host servers. WebSockets have a lot of extra tooling available that server owners would like to use, such proxies or tunnels, but they don't work properly for raw TCP connections. They also make encrypted connections easier, since it works the same as for other web applications, rather than having to set it up specifically for the Drawpile server.
+
+You can tell which socket is being used by looking at the bottom-right corner of the status bar in Drawpile. If it says (ws), it's using WebSockets, (tcp) means TCP. If you for some reason want to force Drawpile to connect via WebSockets or TCP, you can use the button with the three dots on the Join, Browse and Host pages and pick it explicitly. In the browser, there's no TCP, so this option doesn't exist there.
+
+![Layer locks]({{ "/assets/img/help/sockettype.webp" | relative_url }})
 
 ## And More <a href="#feature-tags"><span class="tag is-medium is-info has-text-weight-bold" title="Available in sessions hosted with Drawpile 2.2 and 2.3.">2.2-compatible</span></a>
 
@@ -410,4 +521,7 @@ And a bunch of other fixes, performance improvements and features, such as:
 * Edit → Lightness/Darkness to Alpha actions, for turning lightness or darkness into transparency.
 * Fixed audio playback on 32 bit Windows, Android and the Linux AppImage.
 * Support for using the eraser side of pens on Android.
+* Better zoom quality in hardware renderer mode.
+* Improved macOS support, including for Tahoe.
+* Server management improvements, allowing per-session control over archiving and size limits.
 * And even more, plus further additions to the server and tools.
