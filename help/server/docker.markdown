@@ -100,3 +100,9 @@ To update the server components, run `git pull` to update the repository. If you
 You can update the web admin to the latest version by running the `./update-webadmin.sh` script.
 
 Before connecting to the server, if your VPS provider has an additional local firewall (IONOS does!), you should make sure the ports `27750`, `443`, and `80` are allowed.
+
+## Optional: Run the beta or an older server version
+
+Update the [docker-compose.yaml](https://github.com/drawpile/dpserver/blob/master/docker-compose.yaml#L4) file to the appropriate [tag](https://hub.docker.com/r/drawpile/drawpile-srv/tags) (for example, setting to `image: drawpile/drawpile-srv:2.2.2` or `image: drawpile/drawpile-srv:2.3.0-beta.4`).
+
+Then it's the same as updating the server. Run `git pull` to update the repository. Resolve resulting conflicts since we changed the files inside, run `./docker-compose-wrapper pull`, followed by `./docker-compose-wrapper up -d` to restart the changed services.
