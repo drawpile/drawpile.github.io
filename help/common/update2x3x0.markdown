@@ -1,19 +1,15 @@
 ---
 layout: drawpile_help
-title:  "What's New in 2.3.0 (Beta)"
+title:  "What's New in 2.3.0"
 description: "An illustrated overview of new stuff in Drawpile 2.3.0."
 date: 2025-08-07 00:00:00 +0200
 category: "help"
 tag: help common
 ---
 
-<div class="notification">
-<strong>Note:</strong> Drawpile version 2.3.0 is currently in beta. It should be stable and is ready for use, but features may still get added or changed. If you want to give feedback on it – especially if the new version breaks your workflow – <a href="https://drawpile.net/help/" target="_blank">please do so here!</a>
-</div>
-
 Drawpile 2.3.0 has lots of new features over versions 2.2.x. It is still [backward compatible](#compatibility) though, meaning you can use the new version and still draw with people using the previous one.
 
-To install it, [take a look at the release announcement](https://drawpile.net/news/release-2.3.0-beta.3/){:target="_blank"} or [go straight to the downloads page to grab and install it](https://drawpile.net/download/#Beta).
+To install it, [take a look at the release announcement](https://drawpile.net/news/release-2.3.0/){:target="_blank"} or [go straight to the downloads page to grab and install it](https://drawpile.net/download/).
 
 Below is an illustrated guide showing off most of the new features in this version.
 
