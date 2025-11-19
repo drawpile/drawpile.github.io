@@ -34,6 +34,16 @@ For further troubleshooting, refer to [the tablet setup and troubleshooting page
 
 ![Tablet Drivers menu]({{ "/assets/img/help/tabletdriver.webp" | relative_url }})
 
+### Why does my tablet only draw on one side of the application?
+
+This is a bug in the Huion tablet driver, it gets wedged that way sometimes. There's nothing you can do about it inside of Drawpile, the tablet simply doesn't send any inputs at all.
+
+To fix it, restart Drawpile, restart your computer, reinstall the driver, clear its data and similar "turn it off and on again" things. Eventually, it will suddenly start working again.
+
+You can also try using [OpenTabletDriver from opentabletdriver.net](https://opentabletdriver.net/) instead. It often works better than the ones provided by hardware manufacturers.
+
+For further troubleshooting, refer to [the tablet setup and troubleshooting page](/help/tech/tablet).
+
 ### Why did my tablet stop working when it was fine yesterday?
 
 This usually happens after a Windows or tablet driver update breaking stuff. In Drawpile, pick a different option under Edit → Tablet Driver. Try them all until you find one that works. It may be one that previously didn't work!

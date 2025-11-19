@@ -52,6 +52,8 @@ If none of that works, restart your computer and try again, sometimes tablets fa
 
 If that doesn't work, toggle it back the other way and restart your computer again. It's pretty silly, but some tablets (especially Huion) often suddenly start working if Windows Ink and Wintab are toggled back and forth like this.
 
+You can also try using [OpenTabletDriver from opentabletdriver.net](https://opentabletdriver.net/) instead. It often works better than the ones provided by hardware manufacturers.
+
 If that still doesn't work, come ask for help on Discord, the web chat or GitHub. Take a look at [the help page](https://drawpile.net/help/) for links to those.
 
 ## Linux
