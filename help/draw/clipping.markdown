@@ -7,60 +7,58 @@ category: "help"
 tag: help draw
 ---
 
-*This article is available in the following languages:* English, [*German*](clipping.de_DE).
+Various drawing programs have different ways of handling clipping, alpha inheritance, alpha preserving and alpha locking. Drawpile tries to support all of them.
 
-<div class="notification">
-    <strong>Note:</strong> Drawpile 2.3 (currently in beta) adds <a href="/help/common/update2x3x0#layer-clipping-23-only">Clip to Layer Below</a> and <a href="/help/common/update2x3x0#explicit-inheritpreserve-alpha-23-only">Inherit Alpha</a> options for clipping. The below information is about Drawpile 2.2.
-</div>
+## Layer Clipping
 
-Drawpile supports alpha preserve on layers. This is also known by various other names, like "clipping groups" or "inherit alpha". What it means is that you have a layer that doesn't add new pixels to the canvas, it only modifies something below it. It's frequently used for shading and lighting.
+Drawpile calls this "clip to layer below", other programs sometimes call it "clipping" or "clipping groups". This works like it does in e.g. SAI, CSP, Procreate or Photoshop.
 
-In Drawpile, all blend modes except Normal and Erase preserve alpha. That means you don't need to do anything special to enable it, just stick your layers into a group . So, for example, if you want to do shading, you'd arrange your layers like this:
+You can activate it using the top-left button in the layers dock. It will make it so that the layer with clipping enabled only affects the opaque parts of the layer or group below it. If you enable clipping on multiple layers in sequence, they all clip to the layer below the set.
 
-* 📁 **Group** (Normal)
-  * 📄 **Lines** (Normal)
-  * 📄 **Lighting** (Screen)
-  * 📄 **Shading** (Multiply)
-  * 📄 **Colors** (Normal)
+Like in other programs, enabling clipping on the bottom-most layer in a group does nothing and you can't clip to a group set to pass-through.
 
-The **Lighting** and **Shading** layers will preserve the alpha of the **Colors** layer, letting you light and shade without worrying about spilling over the edges.
+<video controls>
+  <source src="{{ "/assets/vid/help/clipping.mp4" | relative_url }}" type="video/mp4"/>
+</video>
 
-The group is *required*! Without it, your layers will blend with the canvas background, meaning you won't get any useful alpha preservation.
+## Inherit Alpha
 
-If you want a Normal layer with alpha preseve, use the Recolor blend mode.
+This works like the same feature in Krita and similar to "clip to backdrop" in GIMP.
 
-If you *don't* want stuff inside a group to preserve alpha, set the group's blend mode to Pass-Through.
+You can activate it using the second button at the top-left of the layers dock. It will make the layer clip to everything below it within the same layer group. That makes it slightly more flexible than clipping to a single layer, but in simpler cases, you end up having to create more layer groups around the stuff you want to clip.
 
-## Masks
+Enabling this outside of a layer group usually doesn't make sense, since your background will usually be fully opaque anyway. Setting a layer group to pass-through makes it exempt from this.
 
-The above kinds of arrangements should be enough in most cases. If you really *do* need a mask, you can use an Erase layer in an arrangement like this:
+<video controls>
+  <source src="{{ "/assets/vid/help/inheritalpha.mp4" | relative_url }}" type="video/mp4"/>
+</video>
 
-* 📁 **Group** (Normal)
-  * 📄 **Mask** (Erase)
-  * 📄 **Other Stuff** (Normal)
+## Automatic Alpha Preserve
 
-Now when you draw on the **Mask** layer, it will mask off those parts on the layers below, giving you the same effect as a transparency mask.
+Most blend modes only really make sense when you clip them to something. For example, Multiply only really multiplies and Saturation only changes the saturation of the opaque part of what they are applied to. So by default, Drawpile automatically enables "inherit alpha" on layers and "alpha preserve" on your tool for those blend modes. It also gives you an extra "Recolor" blend mode, which is just Normal with alpha preserve enabled.
 
-## Alpha Lock
+If you don't want this, you can turn it off through the top menu under Layer → Automatically inherit alpha. It's also linked in other places, like the user interface preferences or the hamburger menu in most tools.
 
-<div class="notification">
-    <strong>Note:</strong> Drawpile 2.3 (currently in beta) adds <a href="/help/common/update2x3x0#layer-alpha-lock-22-compatible">alpha lock for layers</a>. The below information is about Drawpile 2.2.
-</div>
+<video controls>
+  <source src="{{ "/assets/vid/help/autoalphatoggle.mp4" | relative_url }}" type="video/mp4"/>
+</video>
 
-Some programs let you "alpha lock" a layer, meaning when you draw on it, the opacity of the pixels on it won't change. In Drawpile, that's something you set on your brush, not on the layer.
+## Layer Alpha Lock and Tool Alpha Preserve
 
-On classic brushes, change the blend mode to "Recolor". On MyPaint brushes, toggle the lock button.
+There's two ways to only draw on top of the opaque parts of a layer: alpha locking the layer or enabling alpha preserve on your tool. They both do the same thing, this is again just something where other programs do it in different ways and Drawpile gives you all of them.
 
-The shortcut for this is called "Toggle Recolor Mode", by default it's <kbd>Shift+E</kbd>.
+To alpha lock your layer, click the third button at the top-left of the layer list. You can only do this to regular layers, not layer groups. This will only apply to yourself, it doesn't interfere with other people drawing on the layer.
 
-![Recolor mode on brushes]({{ "/assets/img/help/recolor.webp" | relative_url }})
+To preserve alpha on your tool, toggle the button next to the blend mode in the tool settings. All tools that support this - such as brushes, flood fill tool, gradient tool etc. - should have a button like this. The default shortcut for this is <kbd>Shift</kbd> + <kbd>E</kbd>.
 
-## Alpha Lock Alternative
+<video controls>
+  <source src="{{ "/assets/vid/help/alphalock.mp4" | relative_url }}" type="video/mp4"/>
+</video>
 
-If Recolor mode on your brush is not enough, you can stick the layer into a group and put a layer with the Recolor blend mode on top:
+## Masking
 
-* 📁 **Group** (Normal)
-  * 📄 **Changes** (Recolor)
-  * 📄 **Base** (Normal)
+Drawpile doesn't have layer masks as such, but you can use Erase layers instead. Put the layer you want to mask into a layer group and put another layer on top, then set the blend mode of the top layer to Erase.
 
-Now you can draw on the **Changes** layer and it will preserve alpha of the **Base** layer, effectively acting like alpha lock.
+<video controls>
+  <source src="{{ "/assets/vid/help/maskerase.mp4" | relative_url }}" type="video/mp4"/>
+</video>
