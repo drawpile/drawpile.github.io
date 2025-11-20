@@ -72,6 +72,8 @@ There's no known issues with tablets on macOS. If you have trouble anyway, ask o
 
 Drawpile will try to recognize if your device has a pen or not and enable touch painting accordingly. If it gets it wrong, you can change it under Edit → Preferences in the Touch tab under the "One-finger input" setting. Make sure the touch mode is set to "Touchscreen" if you want to draw by touching.
 
+Some tablets, in particular ones with an external monitor, also inexplicably use touch input even when you're drawing with a stylus. If you want to use such a tablet, you need to check the "enable pressure for touch drawing" setting to get pressure sensitivity.
+
 ![Touch preferences]({{ "/assets/img/help/inputtouch.webp" | relative_url }})
 
 If you have other issues, ask for help on Discord, in the web chat or GitHub. Take a look at [the help page](https://drawpile.net/help/) for links to those.
