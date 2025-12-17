@@ -20,10 +20,6 @@ This isn't because Drawpile is insecure, it's just because we don't pay Apple pr
 
 What you need to do for this depends on which version of macOS you're running. To find out, click the Apple logo on the top-left and click on "About this Mac". It will tell you the version here.
 
-### On macOS 14 Sonoma and earlier
-
-Command-click or right-click on Drawpile and select **Open**. You will see the same message again, but now there will be a new option to open the application anyway.
-
 ### On macOS 15 Sequoia and later
 
 Unfortunately, Apple has made the process much more roundabout on later versions of macOS.
@@ -42,4 +38,24 @@ Unfortunately, Apple has made the process much more roundabout on later versions
 
 ![Privacy & Security in System Settings]({{ "/assets/img/help/sequoia3.webp" | relative_url }})
 
-This section and screenshots were contributed by [Axocrat](https://twitter.com/axocract){:target="_blank"}.
+#### If Drawpile still doesn't open
+
+Normally, this should be enough and Drawpile will open. However, it seems like the "open anyway" button sometimes bugs out and doesn't actually do what it's supposed to, in which case you need to do it manually.
+
+Open the Terminal application and type in the following, pressing the Enter key after each line. You can also copy and paste them, but do so one line at a time. You may be asked for your password along the way. If any command responds with an error and you're sure you didn't typo anything, just keep going with the next command.
+
+```
+sudo xattr -cr /Applications/Drawpile.app
+sudo xattr -d com.apple.quarantine /Applications/Drawpile.app
+open /Applications/Drawpile.app
+```
+
+You only need to do this if the steps above don't work! Don't run these commands unless you need to.
+
+If it still doesn't work or you need additional help with this stuff, check out [the main help page](https://drawpile.net/help/){:target="_blank"} on how to get in contact.
+
+This section and screenshots were contributed by [Axocrat](https://twitter.com/axocract){:target="_blank"}. Also thanks to xsyetopz for figuring out the manual steps to perform when the open anyway button fails to do its job.
+
+### On macOS 14 Sonoma and earlier
+
+Command-click or right-click on Drawpile and select **Open**. You will see the same message again, but now there will be a new option to open the application anyway.
