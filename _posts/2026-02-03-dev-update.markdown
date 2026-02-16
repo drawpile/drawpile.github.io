@@ -14,7 +14,7 @@ For the following features, you have to enable autosaving and save your project 
 
 To enable autosave, use the options in Edit → Preferences → Files. You can also enable autosave for the current session via File → Autosave.
 
-### Statistcs
+### Statistics
 
 You can view statistics on drawing sessions and times thereof saved in a project file via File → Project Statistics.
 
