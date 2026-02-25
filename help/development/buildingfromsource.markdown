@@ -26,7 +26,7 @@ Compiling software on Linux is usually pretty easy, the setup should only take a
 
 The following instructions should work on **Ubuntu**, **Debian** and anything based on them. For other distributions, you'll have to find the matching dependencies for the stuff listed in step 1. If you need help with this (or anything else), take a look at [the help page](https://drawpile.net/help/) on how to get in touch.
 
-1. Open a terminal and run `sudo apt install build-essential cmake git libqt6svg6 qt6-base-dev qt6-l10n-tools qt6-multimedia-dev qt6-tools-dev qt6-websockets-dev libxkbcommon-dev libzip-dev zipcmp zipmerge ziptool libmicrohttpd-dev libsodium-dev libsystemd-dev qtkeychain-qt6-dev libwebp-dev`
+1. Open a terminal and run `sudo apt install build-essential cmake git libqt6svg6-dev qt6-base-dev qt6-l10n-tools qt6-multimedia-dev qt6-tools-dev qt6-websockets-dev libxkbcommon-dev libzip-dev zipcmp zipmerge ziptool libmicrohttpd-dev libsodium-dev libsystemd-dev qtkeychain-qt6-dev libwebp-dev libzstd-dev libavcodec-dev libavfilter-dev libavformat-dev libavutil-dev libswscale-dev`
 2. [Install Rust](https://www.rust-lang.org/tools/install){:target="_blank"}
 3. Run `git clone https://github.com/drawpile/Drawpile.git` to clone Drawpile
 4. Run `cd Drawpile` to switch into the directory you just cloned
@@ -44,7 +44,7 @@ Building Drawpile on macOS should be reasonably straight-forward, although you h
 1. [Install Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12){:target="_blank"}
 2. [Install Homebrew](https://brew.sh/){:target="_blank"}
 3. [Install Rust](https://www.rust-lang.org/tools/install){:target="_blank"}
-4. Open Terminal.app and run `brew install cmake libzip qt libmicrohttpd libsodium qtkeychain` to install the dependencies
+4. Open Terminal.app and run `brew install cmake libzip qt libmicrohttpd libsodium qtkeychain webp zstd` to install the dependencies
 5. Run `git clone https://github.com/drawpile/Drawpile.git` to clone Drawpile
 6. Run `cmake -S Drawpile -B Drawpile-build -G Xcode` to generate the Xcode project
 7. Run `open Drawpile-build/Drawpile.xcodeproj` to open the project in Xcode and use normally
@@ -75,7 +75,7 @@ Don't hesitate to ask for help if you're having trouble, you can find multiple p
     3. Then `bootstrap-vcpkg.bat -disableMetrics` to set up vcpkg.
 5. Install the dependencies:
     1. This step takes really long to complete. Again, make sure you have at least 50 GB of free disk space.
-    2. Run `vcpkg --disable-metrics install --clean-after-build qt5-base:x64-windows qt5-multimedia:x64-windows qt5-svg:x64-windows qt5-tools:x64-windows qt5-translations:x64-windows qt5-websockets:x64-windows kf5archive:x64-windows libmicrohttpd:x64-windows libsodium:x64-windows qtkeychain:x64-windows` to install the dependencies.
+    2. Run `vcpkg --disable-metrics install --clean-after-build qt5-base:x64-windows qt5-multimedia:x64-windows qt5-svg:x64-windows qt5-tools:x64-windows qt5-translations:x64-windows qt5-websockets:x64-windows kf5archive:x64-windows libmicrohttpd:x64-windows libsodium:x64-windows qtkeychain:x64-windows libwebp:x64-windows zstd:x64-windows` to install the dependencies.
         * **Note:** as of April 2024, xz is broken in vcpkg. If you get an error about `https://github.com/tukaani-project/xz/archive/v5.4.4.tar.gz` not being available, you have to apply [this workaround](https://github.com/microsoft/vcpkg/issues/37839#issuecomment-2028011285){:target="_blank"} and run the above command again.
     3. Go do something else for the next several hours while it installs everything.
 6. Build Drawpile:
