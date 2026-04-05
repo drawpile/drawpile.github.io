@@ -88,19 +88,19 @@ If the token is valid, the login process is complete.
 ## Authentication token
 
 The authentication token format is heavily inspired by the JSON Web Token standard.
-The format is:
+There are two distinct key formats. This is the regular one:
 
-    <version>.<payload>.<signature>
+    1.<payload>.<signature>
 
-where `version` is the token format version number (`1`),
-`payload` is a base64 encoded JSON object and
-`signature` is a base64 encoded Ed25519 signature of `<version>.<payload>`
+where `payload` is a base64 encoded JSON object and
+`signature` is a base64 encoded Ed25519 signature of `1.<payload>`, signed by the private key of the external-auth keypair.
 
 When an avatar image is requested (and returned,) version 2 token format is used:
 
     2.<payload>.<avatar>.<signature>
 
-The `avatar` is a base64 encoded image file.
+where `avatar` is a base64 encoded image file and
+`signature` is a base64 encoded Ed25519 signature of `2.<payload>.<avatar>`, signed by the private key of the external-auth keypair.
 
 The payload contains:
 
