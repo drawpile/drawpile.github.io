@@ -538,7 +538,7 @@ Default value: empty
 
 Type: string
 
-The key of the external authentication server. Only has an effect if you to provide [a URL for authentication](#external-authentication-url) on startup and [enable external authentication](#external-authentication-enabled).
+The key of the external authentication server. If you're generating a keypair, this would use the public key. Only has an effect if you to provide [a URL for authentication](#external-authentication-url) on startup and [enable external authentication](#external-authentication-enabled).
 
 If you want to use drawpile.net's authentication, use the key `9eJ2tMJlqgSqHOIK/GI/qzS14WqIxHeB1Im5Hs/CCCk=`
 
