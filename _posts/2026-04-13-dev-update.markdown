@@ -82,7 +82,7 @@ On Android with Huawei styluses, a double-tap gesture is now translated to the F
 
 Using anti-overflow with a non-zero expand value set will no longer have a chance of crashing when drawing at the edge of the canvas. This was reported by Ausjamcian.
 
-The simplified brush preview checkerboard and text now use proper palette colors. This was reported by xxxx.
+The simplified brush preview now shows the highlight color for brush that smudge (blue in the default theme) and a checkerboard for erasers. This was suggested by Blozzom and issues reported by xxxx.
 
 The files preferences where you can toggle the debug log now has a button to let you clear all log files. This is particularly useful on Android where you can't delete them manually, although it's pretty unlikely that some text files are going to be using a measurable amount of space.
 
