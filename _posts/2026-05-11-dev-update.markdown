@@ -8,6 +8,8 @@ tag: "@askmeaboutloom"
 
 The last two weeks have been mostly spent fixing bugs for the Drawpile 2.3.1-beta.1 release. I'll try to get that released this week, but there's still announcements to write up and such.
 
+Drawpile's git repositories have also been mirrored to Codeberg now at <https://codeberg.org/Drawpile>. You can create issues and pull requests there if you wish, but it's just another place for it, rather than putting everything into only GitHub that has been going down a lot in recent times. I'll probably also look into having the Drawpile organization join the Codeberg e.V., since they are also an organization "for the public good" in Germany.
+
 ## Autoresume
 
 On Android, Drawpile will now automatically resume the last autorecovery file. This is because Android likes to silently terminate applications while they're in the background, giving you no way to decide whether you want to save or discard the current file. This resumption only happens if there's only one candidate and resumption is only attempted once to avoid getting into a crash loop where the file being resumed runs your device out of memory or something.
