@@ -352,7 +352,7 @@ If you wish to implement your own authentication server, refer to [the ext-auth 
 
 The server provides a HTTP API for remote administration. It is enabled via [the `--web-admin-port` command-line option](serverconfig#web-admin-listen-port). By default, only connections from localhost are accepted and no authentication is needed.
 
-Use [the `--web-admin-access` command-line option](serverconfig#web-admin-access-mask) to grant access to the wider network and [the `DRAWPILE_SRV_WEB_ADMIN_AUTH` environment variable](serverconfig#web-admin-auth) to set a HTTP BASIC Auth username/password pair.
+Use [the `--web-admin-access` command-line option](serverconfig#web-admin-access-mask) to grant access to the wider network and [the `DRAWPILESRV_WEB_ADMIN_AUTH` environment variable](serverconfig#web-admin-auth) to set a HTTP BASIC Auth username/password pair.
 
 ### Web Admin Interface
 
