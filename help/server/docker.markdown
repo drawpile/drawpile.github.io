@@ -18,7 +18,7 @@ The following knowledge is assumed:
 
 ## Step 1. Get a (virtual) server
 
-First, you will need an actual server to run the server software on. The Drawpile server is not very demanding, so the cheapest server from [Hetzner](https://www.hetzner.com/cloud), [Digital Ocean](https://www.digitalocean.com/products/droplets), [IONOS](https://www.ionos.com/servers/vps), [OVH](https://www.ovhcloud.com/en/vps/), or any other cloud VPS provider will do just fine.
+First, you will need an actual server to run the server software on. The Drawpile server is not very demanding, so the cheapest server from [Hetzner](https://www.hetzner.com/cloud), [IONOS](https://www.ionos.com/servers/vps), [OVH](https://www.ovhcloud.com/en/vps/), or any other cloud VPS provider will do just fine.
 
 You can also use a physical machine at home (even a [Raspberry Pi](https://github.com/Wade821/PiDrawpile)!) but you will need to ensure your Internet connection is up to the task.
 
