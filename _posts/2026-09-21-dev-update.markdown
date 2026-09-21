@@ -12,7 +12,7 @@ The last two weeks had the final stretches of things to go into 2.3.1-beta.2. Th
 
 ## Menu Button
 
-The "new" and "open" buttons in the file toolbar have now been replaced by a menu button that shows a set of common file options. You probably export files way more frequently than you create and open them, so I think it makes sense to put these on the same level. Creating and opening also involve more clicks afterwards, so I don't think adding one more click to open this menu is acceptable.
+The "new" and "open" buttons in the file toolbar have now been replaced by a menu button that shows a set of common file options. You probably export files way more frequently than you create and open them, so I think it makes sense to put these on the same level. Creating and opening also involve more clicks afterwards, so I don't think adding one more click to open this menu is an issue.
 
 It also adds a duplicate of the entries in the menu bar here for convenience, since the top bar can be annoying to access on mobile devices where the bevel eats into them or the system menu bar pops over it and you have to wait for it to bugger off.
 
