@@ -1,15 +1,15 @@
 ---
 layout: drawpile_help
-title:  "What's New in 2.3.1-beta.2"
-description: "An illustrated overview of new stuff in Drawpile 2.3.1-beta.2."
+title:  "What's New in 2.3.1"
+description: "An illustrated overview of new stuff in Drawpile 2.3.1."
 date: 2026-09-23 00:00:00 +0200
 category: "help"
 tag: help common
 ---
 
-There's many new features in Drawpile 2.3.1-beta.2 over 2.3.0, but they are [fully compatible](#compatibility) with each other. You can draw with people on the older version all the same.
+There's many new features in Drawpile 2.3.1 over 2.3.0, but they are [fully compatible](#compatibility) with each other. You can draw with people on the older version all the same.
 
-For ways to install it [take a look at the release announcement](https://drawpile.net/news/release-2.3.1-beta.2/){:target="_blank"} or [go to the beta section on the downloads page](https://drawpile.net/download/#Beta).
+To install it, [take a look at the release announcement](https://drawpile.net/news/release-2.3.0/){:target="_blank"} or [go straight to the downloads page to grab and install it](https://drawpile.net/download/).
 
 Below is a guide through the new features.
 
@@ -18,11 +18,9 @@ Below is a guide through the new features.
 
 ## Compatibility
 
-Drawpile 2.3.1-beta.2 is **fully compatible** with Drawpile 2.3.0. The network protocol didn't change, so you can draw together with people with any combination of these versions, you'll just have some more features locally. It is also still backward-compatible with 2.2 versions all the same.
+Drawpile 2.3.1 is **fully compatible** with Drawpile 2.3.0. The network protocol didn't change, so you can draw together with people with any combination of these versions, you'll just have some more features locally. It is also still backward-compatible with 2.2 versions all the same.
 
 As far as file-formats go, Drawpile 2.3.0 can't open .dppr files, but .dpcs and .ora files will work in either version. If you saved a .dppr file and want to open it in the older version, just open it and use File → Save As and choose a different format.
-
-If you want to run the beta and stable versions side by side, take a look [at this help page](/help/tech/sidebyside).
 
 ## Project File Format (.dppr)
 
