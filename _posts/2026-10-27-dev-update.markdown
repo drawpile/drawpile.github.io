@@ -6,7 +6,7 @@ category: "devblog"
 tag: "@askmeaboutloom"
 ---
 
-In the last two weeks, Drawpile 2.3.1 has been release and work on the next version has commenced, with the liquify tool already available.
+In the last two weeks, Drawpile 2.3.1 has been released and work on the next version has commenced, with the liquify tool already available.
 
 If you want to test the latter, it's [in the alpha release](https://github.com/drawpile/Drawpile/releases/tag/continuous){:target="_blank"}.
 
